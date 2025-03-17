@@ -1,0 +1,440 @@
+// inspired by: https://github.com/mylinuxforwork/dotfiles
+
+{
+  "hyprland/window": {
+    "rewrite": {
+      "(Ferdium) - .*": "$1",
+      ".* (Brave)": "$1",
+      ".* (Brave Search)": "$1",
+      ".* (Chromium)": "$1",
+      ".* (Microsoft Teams)": "$1",
+      ".* (Mozilla Firefox)": "$1",
+      ".* (Mozilla Thunderbird)": "$1",
+      ".* (KeePassXC)": "$1",
+      ".* (OpenSCAD)": "$1",
+      ".* (Outlook)": "$1"
+    },
+    "separate-outputs": true
+  },
+  
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "all-outputs": false,
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+  		"4": "4",
+  		"5": "5",
+  		"6": "6",
+  		"7": "7",
+  		"8": "8",
+  		"9": "9",
+  		"10": "10"
+    },
+    "persistent-workspaces":{
+      "eDP-1": 3
+    }
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Profile: {profile}\nDriver: {driver}",
+    "format-icons": {
+      "default": "0",
+      "performance": "󰈸",
+      "balanced": "󱋋",
+      "power-saver": "󱩰"
+    }
+  },
+
+  "backlight": {
+    "format": "{icon}",
+    "tooltip-format": "Backlight is at {percent: >3}%",
+    "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
+    "on-scroll-down": "brightnessctl -c backlight set 5%-",
+    "on-scroll-up": "brightnessctl -c backlight set +5%"
+  },
+
+  "custom/empty": {
+    "format": ""
+  },
+
+  "custom/updates": {
+    "format": "U {}",
+    "interval": 300,
+    "exec": "checkupdates-with-aur | wc -l",
+    "exec-if": "exit 0"
+  },
+
+  "cpu": {
+    "format": "C {usage:2}%",
+    "format-alt": "CPU {avg_frequency:>4}GHz {usage:2}%",
+    "on-click-right": "gnome-system-monitor",
+    "interval": 2
+  },
+
+  "temperature": {
+    "thermal-zone": 4,  // cpu-temperature
+    "format": " {temperatureC:2}°C",
+    "format-critical": " {temperatureC:2}°C",
+    "critical-threshold": 86,
+    "interval": 2
+  },
+
+  "memory": {
+    "format": "M {percentage:2}%",
+    "format-alt": "RAM {used:>4}G {percentage:2}%",
+    "tooltip-format": "RAM: {used:2} of {total}GiB\nSwap: {swapUsed:2} of {swapAvail}GiB",
+    "on-click": "",
+    "on-click-right": "gnome-system-monitor",
+    "interval": 2
+  },
+
+  "disk": {
+    "format": "D {percentage_used}%",
+    "format-alt": "SSD {percentage_used}% {used}",
+    "tooltip-format": "{path}: {used} used out of {total} ({percentage_used}%)",
+    "interval": 120,
+    "path" : "/home/panda",
+    "on-click-right": "baobab {path}"
+  },
+
+  "network": {
+    "format": "{ifname}",
+    "format-alt": "Net {ifname} 󰁞{bandwidthUpBytes:>4} 󰁆{bandwidthDownBytes:>4}",
+    "format-wifi": "W {essid} ({signalStrength}%)",
+    "format-ethernet": "N {ifname}",
+    "format-disconnected": "Disconnected",
+    "tooltip-format": "Network: {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "Wireless: {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nBytes Up: {bandwidthUpBytes} Down: {bandwidthDownBytes}\nBits Up: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": "Network: {ifname}\nIP: {ipaddr}\nBytes Up: {bandwidthUpBytes} Down: {bandwidthDownBytes}\nBits Up: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "Network is not connected",
+    "max-length": 42,
+    "on-click-right": "gnome-system-monitor",
+    "interval": 2
+  },
+
+  "pulseaudio": {
+    "scroll-step": 10,
+    "format": "{icon}",
+    "format-alt": "{icon} {volume}%",
+    "tooltip-format": "{desc}, {volume}%",
+    "format-bluetooth": "{icon}",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "headphones": "󰋋",
+      "handsfree": "󰋋",
+      "headset": "󰋋",
+      "phone": "",
+      "portable": "",
+      "car": "󰄋",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click-right": "pavucontrol"
+  },
+
+  "bluetooth": {
+    "format": "{status}",
+    "format-alt": "{status} to {device_alias}",
+    "tooltip-format": "bluetooth {status}",
+    "tooltip-format-connected": "Name: {controller_alias}\nConnected to {device_alias}\n{device_enumerate}",
+    "format-on": "󰂯󱨥",
+    "format-connected": "󰂯",
+    "format-disabled": "󰂯󱨦",
+    "format-off": "󰂯󱨦",
+    "interval": 5,
+    "on-click-middle": "rfkill toggle bluetooth",
+    "on-click-right": "blueman-manager",
+    "format-no-controller": ""
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": [" ", " ", " ", " ", " "]
+  },
+
+  "mpris": {
+    "format": "",
+    "format-alt": " {artist}: {title}",
+    "format-paused": "",
+    "on-click": "",
+    "on-click-right": "playerctl play-pause",
+    "on-click-middle": "playerctl next",
+    "interval": 1
+  },
+  
+  "custom/hypridle": {
+    "format": "",
+    "return-type": "json",
+    "escape": true,
+    "exec-on-event": true,
+    "interval": 60,
+    "exec": "~/.config/hypr/scripts/hypridle.sh status",
+    "on-click": "~/.config/hypr/scripts/hypridle.sh toggle"
+  },
+
+  "custom/notification": {
+    "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂚",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "󱅫",
+      "inhibited-none": "󰂚",
+      "dnd-inhibited-notification": "󰂠",
+      "dnd-inhibited-none": "󰂛"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "escape": true
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "tooltip-format-activated": "Screensaver is inactive",
+    "tooltip-format-deactivated": "Screensaver is active",
+    "format-icons": {
+      "activated": "󰒳",
+      "deactivated": "󰒲"
+    }
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 2
+  },
+
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "tooltip-format": "{:%H:%M:%S %A, den %d. %B %Y KW%V}",
+    "format-alt": "KW{:%V  %d/%m/%Y  %H:%M:%S}",
+    "timezones": [ "Europe/Berlin" ],
+    "on-click-right": "gnome-calendar",
+    "interval": 1
+  }
+}
+
+//  // ChatGPT Launcher
+//  "custom/chatgpt": {
+//    "format": " ",
+//    "on-click": "~/.config/ml4w/settings/ai.sh",
+//    "tooltip-format": "AI Support"
+//  },
+//
+//  // Windows VM
+//  "custom/windowsvm": {
+//    "format": "",
+//    "on-click": "~/.config/ml4w/scripts/launchvm.sh",
+//    "tooltip": false
+//  },
+//
+// // Hypridle inhibitor
+//  "custom/hypridle": {
+//    "format": "",
+//    "return-type": "json",
+//    "escape": true,
+//    "exec-on-event": true,
+//    "interval": 60,
+//    "exec": "~/.config/hypr/scripts/hypridle.sh status",
+//    "on-click": "~/.config/hypr/scripts/hypridle.sh toggle"
+//  },
+//
+// // SwayNC
+//  "custom/notification": {
+//    "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+//    "format": "{icon}",
+//    "format-icons": {
+//      "notification": "<span foreground='red'><sup></sup></span>",
+//      "none": "",
+//      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+//      "dnd-none": "",
+//      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+//      "inhibited-none": "",
+//      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+//      "dnd-inhibited-none": ""
+//    },
+//    "return-type": "json",
+//    "exec-if": "which swaync-client",
+//    "exec": "swaync-client -swb",
+//    "on-click": "swaync-client -t -sw",
+//    "on-click-right": "swaync-client -d -sw",
+//    "escape": true
+//  },
+//
+// // Hypridle inhibitor
+//  "custom/hypridle": {
+//    "format": "",
+//    "return-type": "json",
+//    "escape": true,
+//    "exec-on-event": true,
+//    "interval": 60,
+//    "exec": "~/.config/hypr/scripts/hypridle.sh status",
+//    "on-click": "~/.config/hypr/scripts/hypridle.sh toggle"
+//  },
+//
+//// CPU
+//  "cpu": {
+//    "format": "/ C {usage}% ",
+//    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+//  },
+//
+//  // Memory
+//  "memory": {
+//    "format": "/ M {}% ",
+//    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+//  },
+//
+//  // Harddisc space used
+//  "disk": {
+//    "interval": 30,
+//    "format": "D {percentage_used}% ",
+//    "path": "/",
+//    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+//  },
+//
+//  // Network
+//  "network": {
+//    "format": "{ifname}",
+//    "format-wifi": " {essid} ({signalStrength}%)",
+//    "format-ethernet": "  {ifname}",
+//    "format-disconnected": "Disconnected ⚠",
+//    "tooltip-format": " {ifname} via {gwaddri}",
+//    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+//    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+//    "tooltip-format-disconnected": "Disconnected",
+//    "max-length": 50,
+//    "on-click": "~/.config/ml4w/settings/networkmanager.sh",
+//    "on-click-right": "~/.config/ml4w/scripts/nm-applet.sh toggle",
+//  },
+//
+//  // Battery
+//  "battery": {
+//    "states": {
+//      // "good": 95,
+//      "warning": 30,
+//      "critical": 15
+//    },
+//    "format": "{icon} {capacity}%",
+//    "format-charging": "  {capacity}%",
+//    "format-plugged": "  {capacity}%",
+//    "format-alt": "{icon}  {time}",
+//    // "format-good": "", // An empty format will hide the module
+//    // "format-full": "",
+//    "format-icons": [" ", " ", " ", " ", " "]
+//  },
+//
+//  "user": {
+//    "format": "{user}",
+//    "interval": 60,
+//    "icon": false
+//  },
+//
+//  "network": {
+//    "format": "{ifname}",
+//    "format-wifi": " {essid} ({signalStrength}%)",
+//    "format-ethernet": "  {ifname}",
+//    "format-disconnected": "Disconnected ⚠",
+//    "tooltip-format": " {ifname} via {gwaddri}",
+//    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+//    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+//    "tooltip-format-disconnected": "Disconnected",
+//    "max-length": 50,
+//    "on-click": "",
+//    "on-click-right": "~/.config/ml4w/scripts/nm-applet.sh toggle",
+//  },
+//
+//  "cpu": {
+//      "format": " {usage: >1}%",
+//      "on-click": "alacritty -e htop",
+//      "interval": 2,
+//  },
+//  "memory": {
+//      "format": " {: >1}%",
+//      "on-click": "alacritty -e htop",
+//      "interval": 2,
+//  },
+//  "temperature": {
+//      "thermal-zone": 4,
+//      // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+//      "critical-threshold": 90,
+//      "format-critical": " {temperatureC}°C",
+//      "format": " {temperatureC}°C",
+//      "interval": 2,
+//  },
+//  "backlight": {
+//      // "device": "acpi_video1",
+//      "format": "{icon} {percent: >3}%",
+//      "format-icons": ["", ""],
+//      "on-scroll-down": "brightnessctl -c backlight set 5%-",
+//      "on-scroll-up": "brightnessctl -c backlight set +5%"
+//  },
+//  "battery": {
+//      "states": {
+//          // "good": 95,
+//          "warning": 30,
+//          "critical": 15
+//      },
+//      "format": "{icon} {capacity: >3}%",
+//      // "format-good": "", // An empty format will hide the module
+//      // "format-full": "",
+//      "format-icons": ["", "", "", "", ""]
+//      //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
+//  },
+//   "network": {
+//      // "interface": "wlp2s0", // (Optional) To force the use of this interface
+//      // "format": "⚠ Disabled",
+//      // "format-wifi": " {essid}",
+//      // "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+//      // "format-disconnected": "⚠ Disconnected",
+//      "interface": "wlp0s20f3",
+//      "format": "⦷ ", 
+//      "format-wifi": " {essid}",
+//      "format-ethernet": "⇅",
+//      "format-disconnected": "⦸ ",
+//      "on-click": "alacritty -e nmtui"
+//  },
+//  "pulseaudio": {
+//      "scroll-step": 5,
+//      "format": "{icon} {volume: >3}%",
+//      "format-bluetooth": "{icon} {volume: >3}%",
+//      "format-muted":" muted",
+//      "format-icons": {
+//          "headphones": "",
+//          "handsfree": "",
+//          "headset": "",
+//          "phone": "",
+//          "portable": "",
+//          "car": "",
+//          "default": ["", ""]
+//      },
+//      "on-click": "pavucontrol"
+/  },
+//   "custom/pacman": {
+//      "format": " {}",
+//      "interval": 180,
+//      "exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'",       // # of updates and tooltip details
+//      "exec-if": "exit 0",                  // always run; consider advanced run conditions
+//      "on-click": "alacritty -e sudo pacman -Syu", // update system
+//      "signal": 8
+//  },
+//  "custom/power": {
+//    	"format":"",
+//     	"on-click": "nwgbar",
+//    	"tooltip": true,
+//      "tooltip-format": "power options",
+//   },

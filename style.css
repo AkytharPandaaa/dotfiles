@@ -1,0 +1,107 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+ * Panda colors (inspired by Catppuccin-Frappe)
+ * -------------------------------------------------------------------------- */
+
+@define-color text-light  #eeeeee;
+@define-color text-dark   #424242;
+
+@define-color background-light  #dddddd;
+@define-color background-dark   #505050;
+
+@define-color lime    #77dd77;
+@define-color red     #ff7777;
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+  padding: 0;
+  margin: 0;
+  transition: none;
+}
+
+* {
+  color: @text;
+  font-family:
+    RecMonoDuotoneNerdFont, RecMonoCasualNerdFont, DroidSansMNerdFont,
+    CodeNewRomanNerdFont, monospace;
+  font-size: 16px;
+  font-weight: 500;
+
+  margin-right: 2px;
+  margin-left: 2px;
+  border-radius: 2px;
+}
+
+#tooltip label {
+  color: @text-light;
+}
+
+window#waybar {
+  background: transparent;
+  color: @text-light;
+  font-weight: 700;
+}
+
+#clock,
+#battery,
+#cpu,
+#disk,
+#memory,
+#idle_inhibitor,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#bluetooth,
+#power-profiles-daemon,
+#workspaces,
+#mpris,
+#custom-launcher,
+#custom-power,
+#custom-pacman,
+#custom-notification,
+#custom-updates,
+#custom-hypridle,
+#custom-exit {
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-bottom: 2px;
+  color: @text-light;
+  background-color: @background-dark;
+}
+
+#workspaces,
+#workspaces button,
+#workspaces button.focused,
+#clock,
+#tray {
+  color: @lime;
+  background-color: @background-dark;
+}
+
+#workspaces,
+#workspaces button,
+#workspaces button.focused {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+#battery.critical:not(.charging) {
+  background: @red;
+}
