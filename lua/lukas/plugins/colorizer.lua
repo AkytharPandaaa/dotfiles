@@ -16,6 +16,7 @@ return {
 				-- Available modes: foreground (colorizes text), background
 				mode = "foreground", -- Set the display mode.
 			},
+			"*",
 		})
 	end,
 }
