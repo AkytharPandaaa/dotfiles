@@ -1,16 +1,20 @@
 function syu
   echo "update via pacman"
   sudo pacman --noconfirm --needed -Syyu
+  echo ""
 
-  echo "\nupdate via yay"
+  echo "update via yay"
   yay --noconfirm --needed -Syu
+  echo ""
 
-  echo "\nupdate via flatpak"
+  echo "update via flatpak"
   sudo flatpak update --system --assumeyes --noninteractive
+  echo ""
 
-  echo "\nremoving unneeded packages via pacman"
+  echo "removing unneeded packages via pacman"
   sudo pacman --noconfirm -Rs "$(pacman -Qdtq)"
+  echo ""
 
-  echo "\ncleaning downloaded packages via pacman"
+  echo "cleaning downloaded packages via pacman"
   sudo pacman --noconfirm -Sc "$(pacman -Qdtq)"
 end
