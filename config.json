@@ -12,10 +12,13 @@
 
   "modules-left": [
     "hyprland/workspaces",
-    "disk",
-    "memory",
     "cpu",
     "temperature",
+    "memory",
+    "disk",
+    "temperature#ssd",
+    "custom/gpu-usage",
+    "temperature#gpu",
     "custom/updates",
     "mpris"
   ],
