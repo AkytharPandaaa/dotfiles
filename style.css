@@ -14,15 +14,6 @@
  * Panda colors (inspired by Catppuccin-Frappe)
  * -------------------------------------------------------------------------- */
 
-@define-color text-light  #eeeeee;
-@define-color text-dark   #424242;
-
-@define-color background-light  #dddddd;
-@define-color background-dark   #505050;
-
-@define-color lime    #77dd77;
-@define-color red     #ff7777;
-
 /* -----------------------------------------------------------------------------
  * Base styles
  * -------------------------------------------------------------------------- */
@@ -35,7 +26,6 @@
 }
 
 * {
-  color: @text;
   font-family:
     RecMonoDuotoneNerdFont, RecMonoCasualNerdFont, DroidSansMNerdFont,
     CodeNewRomanNerdFont, monospace;
@@ -47,13 +37,8 @@
   border-radius: 2px;
 }
 
-#tooltip label {
-  color: @text-light;
-}
-
 window#waybar {
   background: transparent;
-  color: @text-light;
   font-weight: 700;
 }
 
@@ -85,26 +70,73 @@ window#waybar {
   padding-left: 7px;
   padding-right: 7px;
   margin-bottom: 2px;
-  color: @text-light;
-  background-color: @background-dark;
 }
 
 #workspaces,
 #workspaces button,
-#workspaces button.focused,
-#clock,
-#tray {
-  color: @lime;
-  background-color: @background-dark;
-}
-
-#workspaces,
-#workspaces button,
-#workspaces button.focused {
+#workspaces button.active,
+#workspaces button.empty,
+#workspaces button.visible,
+#workspaces button.persistent,
+#workspaces button.special,
+#workspaces button.urgent,
+#workspaces button.hosting-monitor {
   padding-left: 2px;
   padding-right: 2px;
 }
 
+/* text-light */
+* {
+  color: #eeeeee;
+}
+
+/* text-dark */
+#workspaces button.visible {
+  color: #343434;
+}
+
+/* background-light */
+#workspaces button.visible {
+  background-color: #dddddd;
+}
+/* background-dark */
+#clock,
+#battery,
+#cpu,
+#disk,
+#memory,
+#idle_inhibitor,
+#temperature,
+#temperature.gpu,
+#temperature.ssd,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#bluetooth,
+#power-profiles-daemon,
+#mpris,
+#custom-launcher,
+#custom-gpu-usage,
+#custom-power,
+#custom-pacman,
+#custom-notification,
+#custom-updates,
+#custom-hypridle,
+#custom-exit,
+#workspaces,
+#workspaces button,
+#clock,
+#tray {
+  background-color: #505050;
+}
+
+/* lime */
+#clock,
+#tray {
+  color: #77dd77;
+}
+/* red */
 #battery.critical:not(.charging) {
-  background: @red;
+  color: #ff7777;
 }
