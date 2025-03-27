@@ -4,5 +4,6 @@ function ddiso
   set block_size $(echo "$info" | grep -Po "(?<=Logical block size is: )[0-9]+")
   set volume_size $(echo "$info" | grep -Po "(?<=Volume size is: )[0-9]+")
 
+  echo "running: dd if=$argv of=$name.iso bs=$block_size count=$volume_size status=progress"
   dd if=$argv of=$name.iso bs=$block_size count=$volume_size status=progress
 end
