@@ -1,0 +1,9 @@
+# any nerd font
+ttf-lilex-nerd
+
+# programs
+neovim
+ripgrep
+node
+lazygit
+
