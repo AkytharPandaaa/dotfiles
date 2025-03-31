@@ -19,7 +19,7 @@ function syu
   sudo pacman --noconfirm -Sc "$(pacman -Qdtq)"
 
   echo "updating os-setup repo"
-  workdir="$(pwd)"
+  set workdir "$(pwd)"
   cd /home/os-setup/ && sudo git pull
   cd "$workdir"
 end
