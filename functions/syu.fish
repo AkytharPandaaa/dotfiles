@@ -17,8 +17,9 @@ function syu
 
   echo "cleaning downloaded packages via pacman"
   sudo pacman --noconfirm -Sc "$(pacman -Qdtq)"
+  echo ""
 
-  echo "updating os-setup repo"
+  echo "updating os-setup private repository"
   set workdir "$(pwd)"
   cd /home/os-setup/ && sudo git pull
   cd "$workdir"
