@@ -1,7 +1,7 @@
 function zmkfwu
+  git pull
   set git_hash $(git log --pretty=format:"%h" | head -n1)
 
-  git pull
   git rm firmware_*.zip
   mv -v ~/Downloads/firmware.zip ./firmware_$git_hash.zip
   git add firmware_$git_hash.zip
