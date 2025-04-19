@@ -45,6 +45,7 @@ return {
 				"jsonls",
 				"ltex",
 				"openscad_lsp",
+				"openscad_language_server",
 				"powershell_es",
 				"millet",
 				"yamlls",
@@ -62,6 +63,9 @@ return {
 				"shfmt", -- sh formatter
 				"pylint", -- python linter
 				"eslint_d", -- js linter
+				"ast-grep", -- c, java, c#, formatter
+				"autopep8", -- python formatter
+				"tex-fmt", -- latex formatter
 			},
 		})
 	end,
