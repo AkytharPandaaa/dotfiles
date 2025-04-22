@@ -45,7 +45,6 @@ return {
 				"jsonls",
 				"ltex",
 				"openscad_lsp",
-				"openscad_language_server",
 				"powershell_es",
 				"millet",
 				"yamlls",
