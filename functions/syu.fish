@@ -6,7 +6,7 @@ function syu
   echo ""
 
   echo "update via yay"
-  yay --noconfirm --needed -Syu
+  yay --sudoloop --noconfirm --needed -Syua --cleanafter
   echo ""
 
   echo "update via flatpak"
@@ -15,6 +15,10 @@ function syu
 
   echo "removing unneeded packages via pacman"
   sudo pacman -Qdtq | sudo pacman --noconfirm -Rsu - 
+  echo ""
+
+  echo "removing unneeded packages via yay"
+  yay --sudoloop --noconfirm -Ycc
   echo ""
 
   echo "cleaning downloaded packages via pacman"
