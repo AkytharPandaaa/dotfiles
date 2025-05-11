@@ -1,4 +1,6 @@
 function syu
+  set workdir "$(pwd)"
+
   echo "update via pacman"
   sudo pacman --noconfirm --needed -Syyu
   echo ""
@@ -20,7 +22,6 @@ function syu
   echo ""
 
   echo "updating os-setup private repository"
-  set workdir "$(pwd)"
   cd /home/os-setup/ && sudo git pull
   cd "$workdir"
 end
