@@ -1,5 +1,5 @@
 function syu
-  set workdir "$(pwd)"
+  set current_path "$(pwd)"
 
   echo "update via pacman"
   sudo pacman --noconfirm --needed -Syyu
@@ -14,14 +14,14 @@ function syu
   echo ""
 
   echo "removing unneeded packages via pacman"
-  sudo pacman --noconfirm -Rs "$(pacman -Qdtq)"
+  sudo pacman -Qdtq | sudo pacman --noconfirm -Rsu - 
   echo ""
 
   echo "cleaning downloaded packages via pacman"
-  sudo pacman --noconfirm -Sc "$(pacman -Qdtq)"
+  sudo pacman -Qdtq | sudo pacman --noconfirm -Sc -
   echo ""
 
   echo "updating os-setup private repository"
   cd /home/os-setup/ && sudo git pull
-  cd "$workdir"
+  cd "$current_path"
 end
