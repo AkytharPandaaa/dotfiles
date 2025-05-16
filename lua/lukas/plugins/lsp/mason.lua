@@ -68,6 +68,7 @@ return {
 			},
 			auto_update = true, -- default: false, automatic tool updates
 			run_on_start = true, -- default: true, install/update on startup
+			start_delay = 3000, -- default: 0, wait x milliseconds before starting installation/updates
 			debounce_hours = 2, -- default: nil, wait at least x hours between updates
 		})
 	end,
