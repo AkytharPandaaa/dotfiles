@@ -1,7 +1,7 @@
 return {
-	"williamboman/mason.nvim",
+	"mason-org/mason.nvim",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
+		"mason-org/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer",
 	},
 	config = function()
@@ -66,6 +66,9 @@ return {
 				"autopep8", -- python formatter
 				"tex-fmt", -- latex formatter
 			},
+			auto_update = true, -- default: false, automatic tool updates
+			run_on_start = true, -- default: true, install/update on startup
+			debounce_hours = 2, -- default: nil, wait at least x hours between updates
 		})
 	end,
 }
