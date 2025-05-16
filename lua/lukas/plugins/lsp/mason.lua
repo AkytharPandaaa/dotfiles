@@ -39,7 +39,7 @@ return {
 				"harper_ls",
 				"html",
 				"jsonls",
-				"ltex",
+				"ltex_plus",
 				"lua_ls",
 				"millet",
 				"openscad_lsp",
