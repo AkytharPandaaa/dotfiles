@@ -6,4 +6,5 @@ neovim
 ripgrep
 node
 lazygit
+go
 
