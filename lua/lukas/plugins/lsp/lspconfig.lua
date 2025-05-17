@@ -131,11 +131,25 @@ return {
 			},
 		})
 
+		-- arduino_language_server
+		vim.lsp.config("arduino_language_server", {
+			capabilities = capabilities,
+			cmd = { "arduino-language-server" },
+			filetypes = { "arduino" },
+		})
+
 		-- asm_lsp
 		vim.lsp.config("asm_lsp", {
 			cmd = { "asm-lsp" },
 			filetypes = { "asm", "vmasm" },
 			root_markers = { ".asm-lsp.toml", ".git" },
+		})
+
+		-- astro
+		vim.lsp.config("astro", {
+			cmd = { "astro-ls", "--stdio" },
+			init_options = { typescript = {} },
+			root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
 		})
 
 		-- bashls
@@ -181,6 +195,13 @@ return {
 			},
 		})
 
+		-- docker_compose_language_service
+		vim.lsp.config("docker_compose_language_service", {
+			cmd = { "docker-compose-langserver", "--stdio" },
+			filetypes = { "yaml.docker-compose" },
+			root_markers = { "docker-compose.yaml", "docker-compose.yml", "compose.yaml", "compose.yml" },
+		})
+
 		-- dockerls
 		vim.lsp.config("dockerls", {
 			cmd = { "docker-langserver", "--stdio" },
@@ -208,6 +229,14 @@ return {
 				"vue",
 				"htmlangular",
 			},
+			root_markers = { ".git" },
+		})
+
+		-- fish_lsp
+		vim.lsp.config("fish_lsp", {
+			cmd = { "fish-lsp", "start" },
+			cmd_env = { fish_lsp_show_client_popups = false },
+			filetypes = { "fish" },
 			root_markers = { ".git" },
 		})
 
@@ -266,6 +295,13 @@ return {
 			settings = {},
 		})
 
+		-- hyprls
+		vim.lsp.config("hyprls", {
+			cmd = { "hyprls", "--stdio" },
+			filetypes = { "hyprlang" },
+			root_markers = { ".git" },
+		})
+
 		-- jsonls
 		vim.lsp.config("jsonls", {
 			cmd = { "vscode-json-language-server", "--stdio" },
@@ -274,6 +310,18 @@ return {
 				provideFormatter = true,
 			},
 			root_markers = { ".git" },
+		})
+
+		-- lsp_ai
+		vim.lsp.config("lsp_ai", {
+			cmd = { "lsp-ai" },
+			filetypes = {},
+			init_options = {
+				memory = {
+					file_store = vim.empty_dict(),
+				},
+				models = vim.empty_dict(),
+			},
 		})
 
 		-- ltex_plus
@@ -387,6 +435,13 @@ return {
 			cmd = { "openscad-lsp", "--stdio" },
 			filetypes = { "openscad" },
 			{ ".git" },
+		})
+
+		-- postgres_lsp
+		vim.lsp.config("postgres_lsp", {
+			cmd = { "postgrestools", "lsp-proxy" },
+			filetypes = { "sql" },
+			root_markers = { "postgrestools.jsonc" },
 		})
 
 		-- powershell_es
