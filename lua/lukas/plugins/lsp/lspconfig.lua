@@ -370,7 +370,7 @@ return {
 						"typst",
 						"xhtml",
 					},
-					language = { "en-GB" },
+					language = { "de-DE" },
 				},
 			},
 		})
