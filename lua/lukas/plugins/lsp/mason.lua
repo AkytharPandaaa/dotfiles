@@ -60,16 +60,16 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
-				"shfmt", -- sh formatter
-				"clang-format", -- c# formatter
-				"pylint", -- python linter
-				"eslint_d", -- js linter
 				"ast-grep", -- c, java, c#, formatter
 				"autopep8", -- python formatter
+				"black", -- python formatter
+				"clang-format", -- c# formatter
+				"eslint_d", -- js linter
+				"isort", -- python formatter
+				"prettier", -- prettier formatter
+				"pylint", -- python linter
+				"shfmt", -- sh formatter
+				"stylua", -- lua formatter
 				"tex-fmt", -- latex formatter
 			},
 			auto_update = true, -- default: false, automatic tool updates
