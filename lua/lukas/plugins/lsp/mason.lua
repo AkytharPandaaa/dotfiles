@@ -65,6 +65,7 @@ return {
 				"isort", -- python formatter
 				"black", -- python formatter
 				"shfmt", -- sh formatter
+				"clang-format", -- c# formatter
 				"pylint", -- python linter
 				"eslint_d", -- js linter
 				"ast-grep", -- c, java, c#, formatter
