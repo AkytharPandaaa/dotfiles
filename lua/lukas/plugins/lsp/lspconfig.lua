@@ -430,6 +430,39 @@ return {
 			root_markers = { "millet.toml" },
 		})
 
+		-- omnisharp
+		vim.lsp.config("omnisharp", {
+			capabilities = {
+				workspace = {
+					workspaceFolders = false,
+				},
+			},
+			cmd = {
+				"omnisharp",
+				"-z",
+				"--hostPID",
+				"12345",
+				"DotNet:enablePackageRestore=false",
+				"--encoding",
+				"utf-8",
+				"--languageserver",
+			},
+			filetypes = { "cs", "vb" },
+			init_options = {},
+			root_markers = { ".sln", ".csproj", "omnisharp.json", "function.json" },
+			settings = {
+				FormattingOptions = {
+					EnableEditorConfigSupport = true,
+				},
+				MsBuild = {},
+				RenameOptions = {},
+				RoslynExtensionsOptions = {},
+				Sdk = {
+					IncludePrereleases = true,
+				},
+			},
+		})
+
 		-- openscad_lsp
 		vim.lsp.config("openscad_lsp", {
 			cmd = { "openscad-lsp", "--stdio" },

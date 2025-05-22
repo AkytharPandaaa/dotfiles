@@ -46,6 +46,7 @@ return {
 				"ltex_plus",
 				"lua_ls",
 				"millet",
+				"omnisharp",
 				"openscad_lsp",
 				"postgres_lsp",
 				"powershell_es",
