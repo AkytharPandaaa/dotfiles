@@ -27,8 +27,8 @@
 
 * {
   font-family:
-    RecMonoDuotoneNerdFont, RecMonoCasualNerdFont, DroidSansMNerdFont,
-    CodeNewRomanNerdFont, monospace;
+    RecMonoDuotoneNerdFont, "0xProtoNerdFont", RecMonoDuotoneNerdFont,
+    DroidSansMNerdFont, CodeNewRomanNerdFont, monospace;
   font-size: 16px;
   font-weight: 500;
 
@@ -42,23 +42,23 @@ window#waybar {
   font-weight: 700;
 }
 
-#clock,
+#backlight,
 #battery,
+#bluetooth,
+#clock,
 #cpu,
 #disk,
-#memory,
 #idle_inhibitor,
+#memory,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
 #temperature,
 #temperature.gpu,
 #temperature.ssd,
-#backlight,
-#network,
-#pulseaudio,
 #tray,
-#bluetooth,
-#power-profiles-daemon,
 #workspaces,
-#mpris,
 #custom-launcher,
 #custom-gpu-usage,
 #custom-power,
@@ -76,11 +76,11 @@ window#waybar {
 #workspaces button,
 #workspaces button.active,
 #workspaces button.empty,
-#workspaces button.visible,
+#workspaces button.hosting-monitor,
 #workspaces button.persistent,
 #workspaces button.special,
 #workspaces button.urgent,
-#workspaces button.hosting-monitor {
+#workspaces button.visible {
   padding-left: 2px;
   padding-right: 2px;
 }
