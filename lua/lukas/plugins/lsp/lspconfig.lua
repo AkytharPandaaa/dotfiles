@@ -232,13 +232,13 @@ return {
 			root_markers = { ".git" },
 		})
 
-		-- fish_lsp
-		vim.lsp.config("fish_lsp", {
-			cmd = { "fish-lsp", "start" },
-			cmd_env = { fish_lsp_show_client_popups = false },
-			filetypes = { "fish" },
-			root_markers = { ".git" },
-		})
+		---		-- fish_lsp
+		---		vim.lsp.config("fish_lsp", {
+		---			cmd = { "fish-lsp", "start" },
+		---			cmd_env = { fish_lsp_show_client_popups = false },
+		---			filetypes = { "fish" },
+		---			root_markers = { ".git" },
+		---		})
 
 		-- graphql
 		vim.lsp.config("graphql", {
@@ -312,17 +312,17 @@ return {
 			root_markers = { ".git" },
 		})
 
-		-- lsp_ai
-		vim.lsp.config("lsp_ai", {
-			cmd = { "lsp-ai" },
-			filetypes = {},
-			init_options = {
-				memory = {
-					file_store = vim.empty_dict(),
-				},
-				models = vim.empty_dict(),
-			},
-		})
+		---		-- lsp_ai
+		---		vim.lsp.config("lsp_ai", {
+		---			cmd = { "lsp-ai" },
+		---			filetypes = {},
+		---			init_options = {
+		---				memory = {
+		---					file_store = vim.empty_dict(),
+		---				},
+		---				models = vim.empty_dict(),
+		---			},
+		---		})
 
 		-- ltex_plus
 		vim.lsp.config("ltex_plus", {
