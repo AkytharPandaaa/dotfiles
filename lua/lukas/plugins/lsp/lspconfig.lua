@@ -254,7 +254,7 @@ return {
 			filetypes = {
 				"c",
 				"cpp",
-				"cs",
+				-- "cs",
 				"gitcommit",
 				"go",
 				"html",
