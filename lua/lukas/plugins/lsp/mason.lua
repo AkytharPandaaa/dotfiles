@@ -46,7 +46,6 @@ return {
 				"ltex_plus",
 				"lua_ls",
 				"millet",
-				"omnisharp",
 				"openscad_lsp",
 				"postgres_lsp",
 				"powershell_es",
@@ -64,7 +63,6 @@ return {
 				"ast-grep", -- c, java, c#, formatter
 				"autopep8", -- python formatter
 				"black", -- python formatter
-				"clang-format", -- c# formatter
 				"eslint_d", -- js linter
 				"isort", -- python formatter
 				"prettier", -- prettier formatter

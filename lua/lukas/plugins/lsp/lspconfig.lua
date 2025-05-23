@@ -86,7 +86,7 @@ return {
 		})
 
 		-- configuration autocompletion
-		local capabilities = cmp_nvim_lsp.default_capabilities()
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		-- angularls
 		vim.lsp.config("angularls", {
@@ -428,39 +428,6 @@ return {
 			cmd = { "millet" },
 			filetypes = { "sml" },
 			root_markers = { "millet.toml" },
-		})
-
-		-- omnisharp
-		vim.lsp.config("omnisharp", {
-			capabilities = {
-				workspace = {
-					workspaceFolders = false,
-				},
-			},
-			cmd = {
-				"omnisharp",
-				"-z",
-				"--hostPID",
-				"12345",
-				"DotNet:enablePackageRestore=false",
-				"--encoding",
-				"utf-8",
-				"--languageserver",
-			},
-			filetypes = { "cs", "vb" },
-			init_options = {},
-			root_markers = { ".sln", ".csproj", "omnisharp.json", "function.json" },
-			settings = {
-				FormattingOptions = {
-					EnableEditorConfigSupport = true,
-				},
-				MsBuild = {},
-				RenameOptions = {},
-				RoslynExtensionsOptions = {},
-				Sdk = {
-					IncludePrereleases = true,
-				},
-			},
 		})
 
 		-- openscad_lsp
