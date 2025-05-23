@@ -250,7 +250,7 @@ return {
 
 		-- harper_ls
 		vim.lsp.config("harper_ls", {
-			cmd = { "harper_ls", "--stdio" },
+			cmd = { "harper-ls", "--stdio" },
 			filetypes = {
 				"c",
 				"cpp",
