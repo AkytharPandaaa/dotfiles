@@ -194,6 +194,13 @@ return {
 			},
 		})
 
+		-- csharp_ls
+		vim.lsp.config("csharp_ls", {
+			cmd = { "csharp-ls" },
+			filetypes = { "cs" },
+			init_options = { AutomaticWorkspaceInit = true },
+		})
+
 		-- docker_compose_language_service
 		vim.lsp.config("docker_compose_language_service", {
 			cmd = { "docker-compose-langserver", "--stdio" },
@@ -427,6 +434,31 @@ return {
 			cmd = { "millet" },
 			filetypes = { "sml" },
 			root_markers = { "millet.toml" },
+		})
+
+		-- omnisharp
+		vim.lsp.config("omnisharp", {
+			capabilities = capabilities,
+			cmd = { "dotnet", vim.fn.stdpath("data") .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+			--	enable_import_completion = true,
+			--	organize_imports_on_format = true,
+			--	enable_roslyn_analyzers = true,
+			root_dir = function()
+				return vim.fn.getcwd()
+			end,
+
+			-- root_markers = { ".sln", ".csproj", "omnisharp.json", "function.json" },
+			--			settings = {
+			--				FormattingOptions = {
+			--					EnableEditorConfigSupport = true,
+			--				},
+			--				MsBuild = {},
+			--				RenameOptions = {},
+			--				RoslynExtensionsOptions = {},
+			--				Sdk = {
+			--					IncludePrereleases = true,
+			--				},
+			--			},
 		})
 
 		-- openscad_lsp
