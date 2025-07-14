@@ -28,7 +28,7 @@ function zmkfwu
 
   echo "--- updating firmware on git"
   git add firmware_$git_hash.zip
-  git commit -m "firmware: updated firmware to $git_hash."
+  git commit -m "update firmware.zip" -m "updated zip to $git_hash."
   sudo echo "prepare for new flashed controller"
 
   echo "--- waiting for controller to show up in flash-mode"
