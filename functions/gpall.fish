@@ -4,6 +4,7 @@ function gpall
       echo "updating: $dir"
       cd "$dir"
       git pull
+      git submodule update --init --recursive
       git push
       cd ..
       echo ""
