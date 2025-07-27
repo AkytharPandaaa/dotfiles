@@ -1,10 +1,14 @@
-# any nerd font
+# install any nerd font
 ttf-lilex-nerd
 
-# programs
+# programs to install on archlinux
 neovim
 ripgrep
 node
 lazygit
 go
 
+# programs to install on ubuntu LTS
+flatpak install io.neovim.nvim
+sudo apt install ripgrep nodejs golang
+sudo add-apt-repository ppa:lazygit-team/release && sudo apt update && sudo apt install -y lazygit
