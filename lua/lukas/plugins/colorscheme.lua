@@ -46,9 +46,19 @@ return {
 			vim.cmd([[colorscheme catppuccin]])
 		end,
 	},
-	{ "EdenEast/nightfox.nvim" }, -- https://github.com/EdenEast/nightfox.nvim
-	{ "olimorris/onedarkpro.nvim" }, -- https://github.com/olimorris/onedarkpro.nvim
+	{ -- https://github.com/daltonmenezes/aura-theme/tree/main/packages/neovim
+		"baliestri/aura-theme",
+		lazy = false,
+		priority = 1000,
+		config = function(plugin)
+			vim.opt.rtp:append(plugin.dir .. "/package/neovim")
+		end,
+	},
 	{ "Shatur/neovim-ayu" }, -- https://github.com/Shatur/neovim-ayu
+	{ "olimorris/onedarkpro.nvim" }, -- https://github.com/olimorris/onedarkpro.nvim
 	{ "rakr/vim-one" }, -- https://github.com/rakr/vim-one
-	{ "NLKNguyen/papercolor-theme" }, -- https://github.com/NLKNguyen/papercolor-theme
+	{ "rose-pine/neovim", name = "rose-pine" }, -- https://github.com/rose-pine/neovim
+	{ "samueljoli/cyberpunk.nvim" }, -- https://github.com/samueljoli/cyberpunk.nvim
+	{ "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 }, -- https://github.com/scottmckendry/cyberdream.nvim
+	{ "xStormyy/bearded-theme.nvim" }, -- https://github.com/xStormyy/bearded-theme.nvim
 }
