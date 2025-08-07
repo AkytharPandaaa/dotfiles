@@ -51,9 +51,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		dependencies = { "rktjmp/lush.nvim" },
-		config = function()
-			-- your optional config goes here, see below.
-		end,
+		config = function() end,
 	},
 	{ -- https://github.com/pauchiner/pastelnight.nvim
 		"pauchiner/pastelnight.nvim",
@@ -65,10 +63,7 @@ return {
 		"binbandit/aetherglow.nvim",
 		priority = 1000,
 		config = function()
-			require("aetherglow").setup({
-				-- Your config here
-			})
-			vim.cmd.colorscheme("aetherglow")
+			require("aetherglow").setup({})
 		end,
 	},
 	{ "rakr/vim-one" }, -- https://github.com/rakr/vim-one
