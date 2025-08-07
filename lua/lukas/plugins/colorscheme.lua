@@ -18,10 +18,10 @@ return {
 				default_integrations = true,
 				styles = {
 					comments = {},
-					conditionals = { "bold" },
-					loops = { "bold" },
+					conditionals = {},
+					loops = {},
 					functions = {},
-					keywords = { "bold" },
+					keywords = {},
 					strings = {},
 					variables = {},
 					numbers = {},
@@ -58,13 +58,6 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {},
-	},
-	{ -- https://github.com/binbandit/aetherglow.nvim
-		"binbandit/aetherglow.nvim",
-		priority = 1000,
-		config = function()
-			require("aetherglow").setup({})
-		end,
 	},
 	{ "rakr/vim-one" }, -- https://github.com/rakr/vim-one
 	{ "rose-pine/neovim", name = "rose-pine" }, -- https://github.com/rose-pine/neovim
