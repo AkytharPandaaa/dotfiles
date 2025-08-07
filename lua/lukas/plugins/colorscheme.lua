@@ -18,10 +18,10 @@ return {
 				default_integrations = true,
 				styles = {
 					comments = {},
-					conditionals = {},
-					loops = {},
-					functions = { "bold" },
-					keywords = {},
+					conditionals = { "bold" },
+					loops = { "bold" },
+					functions = {},
+					keywords = { "bold" },
 					strings = {},
 					variables = {},
 					numbers = {},
@@ -46,19 +46,32 @@ return {
 			vim.cmd([[colorscheme catppuccin]])
 		end,
 	},
-	{ -- https://github.com/daltonmenezes/aura-theme/tree/main/packages/neovim
-		"baliestri/aura-theme",
+	{ --https://github.com/uloco/bluloco.nvim
+		"uloco/bluloco.nvim",
 		lazy = false,
 		priority = 1000,
-		config = function(plugin)
-			vim.opt.rtp:append(plugin.dir .. "/package/neovim")
+		dependencies = { "rktjmp/lush.nvim" },
+		config = function()
+			-- your optional config goes here, see below.
 		end,
 	},
-	{ "Shatur/neovim-ayu" }, -- https://github.com/Shatur/neovim-ayu
-	{ "olimorris/onedarkpro.nvim" }, -- https://github.com/olimorris/onedarkpro.nvim
+	{ -- https://github.com/pauchiner/pastelnight.nvim
+		"pauchiner/pastelnight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{ -- https://github.com/binbandit/aetherglow.nvim
+		"binbandit/aetherglow.nvim",
+		priority = 1000,
+		config = function()
+			require("aetherglow").setup({
+				-- Your config here
+			})
+			vim.cmd.colorscheme("aetherglow")
+		end,
+	},
 	{ "rakr/vim-one" }, -- https://github.com/rakr/vim-one
 	{ "rose-pine/neovim", name = "rose-pine" }, -- https://github.com/rose-pine/neovim
-	{ "samueljoli/cyberpunk.nvim" }, -- https://github.com/samueljoli/cyberpunk.nvim
-	{ "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 }, -- https://github.com/scottmckendry/cyberdream.nvim
-	{ "xStormyy/bearded-theme.nvim" }, -- https://github.com/xStormyy/bearded-theme.nvim
+	{ "perpetuatheme/nvim", name = "perpetua" }, -- https://github.com/perpetuatheme/nvim
 }
