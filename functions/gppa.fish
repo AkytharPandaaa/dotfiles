@@ -1,4 +1,4 @@
-function gpall
+function gppa
   for dir in (ls -d */ | cut -f1 -d '/')
     if test -e "$dir/.git"
       echo "updating: $dir"
