@@ -1,12 +1,14 @@
 # install any nerd font
 ttf-lilex-nerd
 
+# remove default Neovim Themes
+rm -rv /usr/share/nvim/runtime/colors/*.vim  
+
 # programs to install on archlinux
-neovim
-ripgrep
-node
-lazygit
-go
+pacman -S --noconfirm neovim ripgrep node lazygit go
+
+# programs to install on alpine
+apk add neovim ripgrep nodejs lazygit go
 
 # programs to install on ubuntu LTS
 flatpak install io.neovim.nvim
