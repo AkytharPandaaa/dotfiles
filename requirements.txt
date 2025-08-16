@@ -5,10 +5,10 @@ ttf-lilex-nerd
 rm -rv /usr/share/nvim/runtime/colors/*.vim  
 
 # programs to install on archlinux
-pacman -S --noconfirm neovim ripgrep node lazygit go
+pacman -S --noconfirm neovim ripgrep node lazygit go make
 
 # programs to install on alpine
-apk add neovim ripgrep nodejs lazygit go
+apk add neovim ripgrep nodejs lazygit go make
 
 # programs to install on ubuntu LTS
 flatpak install io.neovim.nvim
