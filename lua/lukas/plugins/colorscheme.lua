@@ -43,7 +43,7 @@ return {
 					which_key = true,
 				},
 			})
-			vim.cmd([[colorscheme catppuccin]])
+			vim.cmd([[colorscheme rose-pine-moon]])
 		end,
 	},
 	{ --https://github.com/uloco/bluloco.nvim
