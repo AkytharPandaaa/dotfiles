@@ -34,7 +34,7 @@
   		"10": "10"
     },
     "persistent-workspaces":{
-      "DP-2": 3
+      "*": 3
     }
   },
 
