@@ -3,6 +3,6 @@ function dcupdate
   killall discord > /dev/null
   killall Discord > /dev/null
 
-  echo "running: \$ sudo sed -i \"s!\0\.0\.[0-9\]\{2,\}!$argv!g\" /opt/discord/resources/build_info.json"
-  sudo sed -i "s!\0\.0\.[0-9\]\{2,\}!$argv!g" /opt/discord/resources/build_info.json
+  echo "running: \$ sudo sed -i \"s![0-9]\{1,\}[.][0-9]\{1,\}[.][0-9]\{1,\}!$argv!g\" /opt/discord/resources/build_info.json"
+  sudo sed -i "s![0-9]\{1,\}[.][0-9]\{1,\}[.][0-9]\{1,\}!$argv!g" /opt/discord/resources/build_info.json
 end
