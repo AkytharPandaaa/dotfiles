@@ -43,7 +43,7 @@ return {
 					which_key = true,
 				},
 			})
-			vim.cmd([[colorscheme rose-pine-moon]])
+			vim.cmd([[colorscheme catppuccin-macchiato]])
 		end,
 	},
 	{ --https://github.com/uloco/bluloco.nvim
@@ -59,6 +59,7 @@ return {
 		priority = 1000,
 		opts = {},
 	},
+	{ "Mofiqul/dracula.nvim" }, -- https://github.com/Mofiqul/dracula.nvim
 	{ "rakr/vim-one" }, -- https://github.com/rakr/vim-one
 	{ "rose-pine/neovim", name = "rose-pine" }, -- https://github.com/rose-pine/neovim
 	{ "perpetuatheme/nvim", name = "perpetua" }, -- https://github.com/perpetuatheme/nvim
