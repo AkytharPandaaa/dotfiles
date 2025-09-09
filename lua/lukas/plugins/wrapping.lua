@@ -1,21 +1,21 @@
--- return {
--- 	"andrewferrier/wrapping.nvim",
--- 	config = function()
--- 		require("wrapping").setup({
--- 			create_keymaps = false,
--- 			create_commands = true,
--- 			auto_set_mode_filetype_allowlist = {
--- 				"asciidoc",
--- 				"gitcommit",
--- 				"latex",
--- 				"mail",
--- 				"markdown",
--- 				"rst",
--- 				"tex",
--- 				"text",
--- 				"typst",
--- 			},
--- 		})
--- 		vim.cmd([[SoftWrapMode]])
--- 	end,
--- }
+return {
+	-- 	"andrewferrier/wrapping.nvim",
+	-- 	config = function()
+	-- 		require("wrapping").setup({
+	-- 			create_keymaps = false,
+	-- 			create_commands = true,
+	-- 			auto_set_mode_filetype_allowlist = {
+	-- 				"asciidoc",
+	-- 				"gitcommit",
+	-- 				"latex",
+	-- 				"mail",
+	-- 				"markdown",
+	-- 				"rst",
+	-- 				"tex",
+	-- 				"text",
+	-- 				"typst",
+	-- 			},
+	-- 		})
+	-- 		vim.cmd([[SoftWrapMode]])
+	-- 	end,
+}
