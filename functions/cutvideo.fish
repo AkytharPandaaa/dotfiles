@@ -3,8 +3,8 @@ function cutvideo
   set video_name $(basename $(pwd))
   set language $argv[1]
   set duration $argv[2]
-  set start_time $argv[3]
-  set episode $argv[4]
+  set episode $argv[3]
+  set start_time $argv[4]
   set filename $(echo "$video_name $episode $language.mp4" | sed s/\"/\\\"/g)
 
 #  echo "detected origin: $origin_file"
