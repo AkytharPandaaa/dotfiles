@@ -7,9 +7,6 @@ function cutvideo
   set start_time $argv[4]
   set filename $(echo "$video_name $episode $language.mp4" | sed s/\"/\\\"/g)
 
-#  echo "detected origin: $origin_file"
-#  echo "new filename: $filename"
-#  echo ""
-  echo "\$ ffmpeg -loglevel quiet -hide_banner -stats -ss $start_time -t 0:$duration -i '$origin_file' \"$filename\""
-  ffmpeg -loglevel quiet -hide_banner -stats -ss $start_time -t "0:$duration" -i $origin_file "$filename"
+  echo "\$ ffmpeg -y -loglevel quiet -hide_banner -stats -ss $start_time -t 0:$duration -i '$origin_file' \"$filename\""
+  ffmpeg -y -loglevel quiet -hide_banner -stats -ss $start_time -t "0:$duration" -i $origin_file "$filename"
 end
