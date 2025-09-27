@@ -39,10 +39,22 @@ function syu
     sudo apt autoclean
   end
 
+  if command -v "apk"
+    echo "--- update via apk"
+    apk update
+    apk upgrade --no-self-upgrade --available --simulate
+    apk upgrade --available
+  end
+
   if command -v "flatpak"
     echo "--- update via flatpak"
     sudo flatpak update --system --assumeyes --noninteractive
     echo ""
+  end
+
+  if command -v "nvim"
+    echo "--- removing standard nvim themes"
+    sudo rm -rv /usr/share/nvim/runtime/colors/*.vim
   end
 
   echo "--- updating os-setup private repository"
