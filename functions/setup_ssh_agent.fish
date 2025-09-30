@@ -9,7 +9,7 @@ function setup_ssh_agent
 
   if grep -q AddKeysToAgent ~/.ssh/config
     echo "setting up key storage"
-    sed -i "s!\(AddKeysToAgent\) .*!\1 yes" ~/.ssh/config
+    sed -i "s!\(AddKeysToAgent\) .*!\1 yes!" ~/.ssh/config
   else
     echo "setting up key storage"
     echo "AddKeysToAgent yes" | tee -a ~/.ssh/config > /dev/null
