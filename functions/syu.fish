@@ -1,7 +1,7 @@
 function syu
   set current_path "$(pwd)"
 
-  if command -v "pacman"
+  if command -v "pacman" > /dev/null
     echo "--- update via pacman"
     sudo pacman --noconfirm --needed -Syyu
     echo ""
@@ -15,23 +15,22 @@ function syu
       echo "--- cleaning downloaded packages via pacman"
       sudo pacman -Qdtq | sudo pacman --noconfirm -Sc -
       echo ""
-    else
-      echo "--- no unneeded packages"
-      echo ""
     end
   end
 
-  if command -v "yay"
+  if command -v "yay" > /dev/null
     echo "--- update via yay"
     yay --sudoloop --noconfirm --needed -Syua --cleanafter
     echo ""
 
-    echo "--- removing unneeded packages via yay"
-    yay --sudoloop --noconfirm -Ycc
-    echo ""
+    if not test -z "$unneeded_packages"
+      echo "--- removing unneeded packages via yay"
+      yay --sudoloop --noconfirm -Ycc
+      echo ""
+    end
   end
 
-  if command -v "apt"
+  if command -v "apt" > /dev/null
     echo "--- update via APT"
     sudo apt update
     sudo apt upgrade -y
@@ -39,20 +38,20 @@ function syu
     sudo apt autoclean
   end
 
-  if command -v "apk"
+  if command -v "apk" > /dev/null
     echo "--- update via apk"
     apk update
     apk upgrade --no-self-upgrade --available --simulate
     apk upgrade --available
   end
 
-  if command -v "flatpak"
+  if command -v "flatpak" > /dev/null
     echo "--- update via flatpak"
     sudo flatpak update --system --assumeyes --noninteractive
     echo ""
   end
 
-  if command -v "nvim"
+  if command -v "nvim" > /dev/null && test -f "/usr/share/nvim/runtime/colors/default.vim" > /dev/null
     echo "--- removing standard nvim themes"
     sudo rm -rv /usr/share/nvim/runtime/colors/*.vim
   end
