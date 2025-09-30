@@ -10,6 +10,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
+		local builtins = require("telescope.builtins")
 
 		telescope.setup({
 			defaults = {
@@ -24,6 +25,7 @@ return {
 			},
 		})
 
+		builtins.colorscheme({ ignore_builtins = true })
 		telescope.load_extension("fzf")
 
 		-- set keymaps
