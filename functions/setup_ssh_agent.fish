@@ -42,6 +42,6 @@ function setup_ssh_agent
   end
 
   echo starting ssh-agent
-  systemctl enable --user ssh-agent.service
-  systemctl start --user ssh-agent.service
+  systemctl --user enable ssh-agent.service
+  systemctl --user start ssh-agent.service
 end
