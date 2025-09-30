@@ -9,10 +9,10 @@ function setup_ssh_agent
 
   if grep -q AddKeysToAgent ~/.ssh/config
     echo "setting up key storage"
-    sed -i "s!\(AddKeysToAgent\) .*!\1 yes" .ssh/config
+    sed -i "s!\(AddKeysToAgent\) .*!\1 yes" ~/.ssh/config
   else
     echo "setting up key storage"
-    echo "AddKeysToAgent yes" | tee -a .ssh/config > /dev/null
+    echo "AddKeysToAgent yes" | tee -a ~/.ssh/config > /dev/null
   end
 
   if not test -e ~/.config/systemd/user/ssh-agent.service
@@ -35,6 +35,7 @@ function setup_ssh_agent
 
   if not test -e ~/.config/environment.d/ssh-agent.conf
     echo "setting up SSH_AUTH_SOCK"
+    mkdir -p ~/.config/environment.d/
     touch ~/.config/environment.d/ssh-agent.conf
     
     echo "SSH_AUTH_SOCK=\"\${XDG_RUNTIME_DIR}/ssh-agent.socket\"" | tee -a ~/.config/environment.d/ssh-agent.conf > /dev/null
