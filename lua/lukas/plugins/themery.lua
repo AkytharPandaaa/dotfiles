@@ -22,5 +22,10 @@ return {
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.
 		})
+
+		-- set keymaps
+		local keymap = vim.keymap -- for conciseness
+
+		keymap.set("n", "<leader>kt", "<cmd>Themery<cr>", { desc = "use Themery menu to change colorscheme" })
 	end,
 }
