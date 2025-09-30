@@ -24,7 +24,9 @@ return {
 			},
 		})
 
-		require("telescope.builtin").colorscheme({ ignore_builtins = true })
+		-- require("telescope.builtin").colorscheme({ ignore_builtins = true })
+		-- commented due to issues with starting the theme manager on startup
+
 		telescope.load_extension("fzf")
 
 		-- set keymaps
