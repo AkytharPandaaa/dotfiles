@@ -1,4 +1,9 @@
 function zmkfwu
+  if test ! -d .git
+    echo "exiting: not running in a git repository"
+    return
+  end
+  
   git pull
   set git_hash $(git log --pretty=format:"%h" | head -n1)
 
@@ -29,19 +34,22 @@ function zmkfwu
   echo "--- updating firmware on git"
   git add firmware_$git_hash.zip
   git commit -m "update firmware.zip" -m "updated zip to $git_hash."
-  sudo echo "prepare for new flashed controller"
+  
+  echo "--- unzipping firmware"
+  unzip -q firmware_$git_hash.zip -d firmware_$git_hash
+  if test ! -d firmware_$git_hash
+    echo "ERROR: unzipping firmware_$git_hash.zip. Please retry!"
+    return
+  end
 
-  echo "--- waiting for controller to show up in flash-mode"
+  sudo echo "--- waiting for controller to show up in flash-mode"
   set device "$(lsblk -o KNAME,MODEL | grep -Po '(sd[a-z0-9]{1,2})(?=\s*\w+\s*UF2)')"
   while test -z $device
-    sleep 1
+    sleep 2
     set device "$(lsblk -o KNAME,MODEL | grep -Po '(sd[a-z0-9]{1,2})(?=\s*\w+\s*UF2)')"
   end
   echo "--- controller found"
   sudo mount /dev/$device /mnt
-
-  echo "--- unzipping firmware"
-  unzip firmware_$git_hash.zip -d firmware_$git_hash
 
   echo "--- copying firmware for '$side'"
   sudo cp -v ./firmware_$git_hash/$(ls -1 firmware_$git_hash | grep $side) /mnt/
