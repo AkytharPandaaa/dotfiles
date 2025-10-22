@@ -9,6 +9,7 @@ return {
 				{ name = "[dark] Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
 				{ name = "[dark] Dracula", colorscheme = "dracula" },
 				{ name = "[dark] Evergarden Spring", colorscheme = "evergarden-spring" },
+				{ name = "[dark] Evergarden Fall", colorscheme = "evergarden-fall" },
 				{ name = "[dark] Kanagawa Wave", colorscheme = "kanagawa-wave" },
 				{ name = "[dark] Makurai Autumn", colorscheme = "makurai_autumn" },
 				{ name = "[dark] Night Owl", colorscheme = "night-owl" },
