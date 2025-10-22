@@ -5,31 +5,7 @@ return {
 		name = "catppuccin",
 		config = function()
 			require("catppuccin").setup({
-				flavour = "auto",
-				background = { light = "latte", dark = "macchiato" },
-				transparent_background = false,
-				show_end_of_buffer = true,
-				term_colors = false,
-				dim_inactive = { enabled = false, shade = "dark", percentage = 0.15 },
 				no_italic = true,
-				no_bold = false,
-				no_underline = false,
-				color_overrides = {},
-				default_integrations = true,
-				styles = {
-					comments = {},
-					conditionals = {},
-					loops = {},
-					functions = {},
-					keywords = {},
-					strings = {},
-					variables = {},
-					numbers = {},
-					booleans = {},
-					properties = {},
-					types = {},
-					operators = {},
-				},
 				integrations = {
 					alpha = true,
 					cmp = true,
@@ -43,7 +19,6 @@ return {
 					which_key = true,
 				},
 			})
-			vim.cmd([[colorscheme rose-pine-moon]])
 		end,
 	},
 	{ -- https://github.com/Skardyy/makurai-nvim
@@ -57,12 +32,10 @@ return {
 			})
 		end,
 	},
-	{ -- https://github.com/pauchiner/pastelnight.nvim
-		"pauchiner/pastelnight.nvim",
-		lazy = false,
-		priority = 1000,
-	},
-	{ "sainnhe/everforest" }, -- https://github.com/sainnhe/everforest
+	{ "everviolet/nvim", name = "evergarden", priority = 1000 }, -- https://github.com/everviolet/nvim
+	{ "mhartington/oceanic-next", priority = 1000 }, -- https://github.com/mhartington/oceanic-next
+	{ "folke/tokyonight.nvim", lazy = false, priority = 1000 }, -- https://github.com/folke/tokyonight.nvim
+	{ "pauchiner/pastelnight.nvim", lazy = false, priority = 1000 }, -- https://github.com/pauchiner/pastelnight.nvim
 	{ "rebelot/kanagawa.nvim" }, -- https://github.com/rebelot/kanagawa.nvim
 	{ "shaunsingh/nord.nvim" }, -- https://github.com/shaunsingh/nord.nvim
 	{ "Mofiqul/dracula.nvim" }, -- https://github.com/Mofiqul/dracula.nvim
