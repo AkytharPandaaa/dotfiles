@@ -19,6 +19,7 @@ return {
 					which_key = true,
 				},
 			})
+			vim.cmd([[colorscheme catppuccin-macchiato]])
 		end,
 	},
 	{ -- https://github.com/Skardyy/makurai-nvim
