@@ -5,8 +5,6 @@ return {
 		require("themery").setup({
 			-- add the config here
 			themes = {
-				{ name = "[dark] Catppuccin Frappe", colorscheme = "catppuccin-frappe" },
-				{ name = "[dark] Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
 				{ name = "[dark] Dracula", colorscheme = "dracula" },
 				{ name = "[dark] Evergarden Spring", colorscheme = "evergarden-spring" },
 				{ name = "[dark] Evergarden Fall", colorscheme = "evergarden-fall" },
@@ -19,6 +17,8 @@ return {
 				{ name = "[dark] Rosé Pine Moon", colorscheme = "rose-pine-moon" },
 				{ name = "[dark] TokyoNight Moon", colorscheme = "tokyonight-moon" },
 				{ name = "[dark] TokyoNight Storm", colorscheme = "tokyonight-storm" },
+				{ name = "[dark] Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
+				{ name = "[dark] Catppuccin Frappe", colorscheme = "catppuccin-frappe" },
 				{ name = "[light] Catppuccin Latte", colorscheme = "catppuccin-latte" },
 				{ name = "[light] Evergarden Summer", colorscheme = "evergarden-summer" },
 				{ name = "[light] Makurai", colorscheme = "makurai_light" },
