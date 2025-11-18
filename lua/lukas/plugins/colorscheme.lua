@@ -39,6 +39,23 @@ return {
 			})
 		end,
 	},
+	{ -- https://github.com/everviolet/nvim
+		"everviolet/nvim",
+		name = "evergarden",
+		priority = 1000,
+		config = function()
+			require("evergarden").setup({
+				style = {
+					tabline = { "reverse" },
+					search = { "reverse" },
+					incsearch = { "reverse" },
+					types = {},
+					keyword = {},
+					comment = {},
+				},
+			})
+		end,
+	},
 	{ -- https://github.com/Skardyy/makurai-nvim
 		"Skardyy/makurai-nvim",
 		config = function()
@@ -50,15 +67,63 @@ return {
 			})
 		end,
 	},
-	{ "everviolet/nvim", name = "evergarden", priority = 1000 }, -- https://github.com/everviolet/nvim
+	{ -- https://github.com/shaunsingh/nord.nvim
+		"shaunsingh/nord.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.nord_italic = false
+		end,
+	},
+	{ -- https://github.com/AlexvZyl/nordic.nvim
+		"AlexvZyl/nordic.nvim",
+		lazy = false,
+		priority = 1000,
+		config = require("nordic").setup({
+			italic_comments = false,
+		}),
+	},
+	{ -- https://github.com/pauchiner/pastelnight.nvim
+		"pauchiner/pastelnight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = require("pastelnight").setup({
+			style = "default",
+			styles = {
+				comments = { italic = false },
+				keyword = { italic = false },
+			},
+		}),
+	},
+	{ -- https://github.com/rose-pine/neovim
+		"rose-pine/neovim",
+		name = "rose-pine",
+		lazy = false,
+		priority = 1000,
+		config = require("rose-pine").setup({
+			styles = {
+				bold = true,
+				italic = false,
+				transparent = false,
+			},
+		}),
+	},
+	{ -- https://github.com/folke/tokyonight.nvim
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("tokyonight").setup({
+				styles = {
+					functions = {},
+					comments = {},
+				},
+			})
+		end,
+	},
 	{ "mhartington/oceanic-next", priority = 1000 }, -- https://github.com/mhartington/oceanic-next
-	{ "folke/tokyonight.nvim", lazy = false, priority = 1000 }, -- https://github.com/folke/tokyonight.nvim
-	{ "pauchiner/pastelnight.nvim", lazy = false, priority = 1000 }, -- https://github.com/pauchiner/pastelnight.nvim
 	{ "rebelot/kanagawa.nvim" }, -- https://github.com/rebelot/kanagawa.nvim
-	{ "shaunsingh/nord.nvim" }, -- https://github.com/shaunsingh/nord.nvim
 	{ "Mofiqul/dracula.nvim" }, -- https://github.com/Mofiqul/dracula.nvim
 	{ "oxfist/night-owl.nvim", lazy = false, priority = 1000 }, -- https://github.com/oxfist/night-owl.nvim
-	{ "AlexvZyl/nordic.nvim", lazy = false, priority = 1000 }, -- https://github.com/AlexvZyl/nordic.nvim
 	{ "perpetuatheme/nvim", name = "perpetua" }, -- https://github.com/perpetuatheme/nvim
-	{ "rose-pine/neovim", name = "rose-pine" }, -- https://github.com/rose-pine/neovim
 }
