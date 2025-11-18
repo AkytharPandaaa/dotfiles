@@ -5,12 +5,11 @@ return {
 		require("themery").setup({
 			-- add the config here
 			themes = {
+				{ name = "[dark] Bamboo", colorscheme = "bamboo-vulgaris" },
 				{ name = "[dark] Dracula", colorscheme = "dracula" },
 				{ name = "[dark] Evergarden Spring", colorscheme = "evergarden-spring" },
 				{ name = "[dark] Evergarden Fall", colorscheme = "evergarden-fall" },
-				{ name = "[dark] Kanagawa Wave", colorscheme = "kanagawa-wave" },
 				{ name = "[dark] Makurai Autumn", colorscheme = "makurai_autumn" },
-				{ name = "[dark] Night Owl", colorscheme = "night-owl" },
 				{ name = "[dark] Nordic", colorscheme = "nordic" },
 				{ name = "[dark] OceanicNext", colorscheme = "OceanicNext" },
 				{ name = "[dark] Pastelnight", colorscheme = "pastelnight" },
@@ -20,6 +19,7 @@ return {
 				{ name = "[dark] Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
 				{ name = "[dark] Catppuccin Frappe", colorscheme = "catppuccin-frappe" },
 				{ name = "[light] Catppuccin Latte", colorscheme = "catppuccin-latte" },
+				{ name = "[light] Bamboo", colorscheme = "bamboo-light" },
 				{ name = "[light] Evergarden Summer", colorscheme = "evergarden-summer" },
 				{ name = "[light] Makurai", colorscheme = "makurai_light" },
 				{ name = "[light] Nord", colorscheme = "nord" },
