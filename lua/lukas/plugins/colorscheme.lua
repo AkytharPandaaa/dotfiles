@@ -22,6 +22,23 @@ return {
 			vim.cmd([[colorscheme catppuccin-macchiato]])
 		end,
 	},
+	{ -- https://github.com/ribru17/bamboo.nvim
+		"ribru17/bamboo.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("bamboo").setup({
+				toggle_style_list = { "vulgaris", "light" },
+
+				code_style = {
+					comments = { italic = false },
+					conditionals = { italic = false },
+					namespaces = { italic = false },
+					parameters = { italic = false },
+				},
+			})
+		end,
+	},
 	{ -- https://github.com/Skardyy/makurai-nvim
 		"Skardyy/makurai-nvim",
 		config = function()
