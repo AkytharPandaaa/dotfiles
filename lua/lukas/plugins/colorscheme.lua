@@ -79,34 +79,40 @@ return {
 		"AlexvZyl/nordic.nvim",
 		lazy = false,
 		priority = 1000,
-		config = require("nordic").setup({
-			italic_comments = false,
-		}),
+		config = function()
+			require("nordic").setup({
+				italic_comments = false,
+			})
+		end,
 	},
 	{ -- https://github.com/pauchiner/pastelnight.nvim
 		"pauchiner/pastelnight.nvim",
 		lazy = false,
 		priority = 1000,
-		config = require("pastelnight").setup({
-			style = "default",
-			styles = {
-				comments = { italic = false },
-				keyword = { italic = false },
-			},
-		}),
+		config = function()
+			require("pastelnight").setup({
+				style = "default",
+				styles = {
+					comments = { italic = false },
+					keyword = { italic = false },
+				},
+			})
+		end,
 	},
 	{ -- https://github.com/rose-pine/neovim
 		"rose-pine/neovim",
 		name = "rose-pine",
 		lazy = false,
 		priority = 1000,
-		config = require("rose-pine").setup({
-			styles = {
-				bold = true,
-				italic = false,
-				transparent = false,
-			},
-		}),
+		config = function()
+			require("rose-pine").setup({
+				styles = {
+					bold = true,
+					italic = false,
+					transparent = false,
+				},
+			})
+		end,
 	},
 	{ -- https://github.com/folke/tokyonight.nvim
 		"folke/tokyonight.nvim",
