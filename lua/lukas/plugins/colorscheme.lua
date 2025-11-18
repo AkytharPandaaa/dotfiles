@@ -122,8 +122,6 @@ return {
 		end,
 	},
 	{ "mhartington/oceanic-next", priority = 1000 }, -- https://github.com/mhartington/oceanic-next
-	{ "rebelot/kanagawa.nvim" }, -- https://github.com/rebelot/kanagawa.nvim
 	{ "Mofiqul/dracula.nvim" }, -- https://github.com/Mofiqul/dracula.nvim
-	{ "oxfist/night-owl.nvim", lazy = false, priority = 1000 }, -- https://github.com/oxfist/night-owl.nvim
 	{ "perpetuatheme/nvim", name = "perpetua" }, -- https://github.com/perpetuatheme/nvim
 }
