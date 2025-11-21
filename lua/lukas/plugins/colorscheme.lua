@@ -28,8 +28,6 @@ return {
 		priority = 1000,
 		config = function()
 			require("bamboo").setup({
-				toggle_style_list = { "vulgaris", "light" },
-
 				code_style = {
 					comments = { italic = false },
 					conditionals = { italic = false },
@@ -82,6 +80,24 @@ return {
 		config = function()
 			require("nordic").setup({
 				italic_comments = false,
+			})
+		end,
+	},
+	{ -- https://github.com/navarasu/onedark.nvim
+		"navarasu/onedark.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("onedark").setup({
+				style = "deep",
+				transparent = false,
+				code_style = {
+					comments = "none",
+					keywords = "none",
+					functions = "none",
+					strings = "none",
+					variables = "none",
+				},
 			})
 		end,
 	},
