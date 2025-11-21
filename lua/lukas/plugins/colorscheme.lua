@@ -38,7 +38,14 @@ return {
 			})
 		end,
 	},
-
+	{ -- https://github.com/sainnhe/edge
+		"sainnhe/edge",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.edge_disable_italic_comment = true
+		end,
+	},
 	{ -- https://github.com/everviolet/nvim
 		"everviolet/nvim",
 		name = "evergarden",
