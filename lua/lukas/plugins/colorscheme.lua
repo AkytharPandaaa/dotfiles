@@ -44,6 +44,8 @@ return {
 		priority = 1000,
 		config = function()
 			vim.g.edge_disable_italic_comment = true
+			vim.g.edge_style = "default"
+			vim.g.edge_better_performance = true
 		end,
 	},
 	{ -- https://github.com/everviolet/nvim
@@ -69,7 +71,9 @@ return {
 		priority = 1000,
 		lazy = false,
 		config = function()
+			vim.g.everforest_background = "medium"
 			vim.g.everforest_disable_italic_comment = true
+			vim.g.everforest_better_performance = true
 		end,
 	},
 	{ -- https://github.com/Skardyy/makurai-nvim
@@ -128,6 +132,16 @@ return {
 					transparent = false,
 				},
 			})
+		end,
+	},
+	{ -- https://github.com/sainnhe/sonokai
+		"sainnhe/sonokai",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.sonokai_style = "atlantis"
+			vim.g.sonokai_disable_italic_comment = true
+			vim.g.sonokai_better_performance = true
 		end,
 	},
 	{ -- https://github.com/folke/tokyonight.nvim
