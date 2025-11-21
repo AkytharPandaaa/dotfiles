@@ -101,24 +101,6 @@ return {
 			})
 		end,
 	},
-	{ -- https://github.com/navarasu/onedark.nvim
-		"navarasu/onedark.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("onedark").setup({
-				style = "deep",
-				transparent = false,
-				code_style = {
-					comments = "none",
-					keywords = "none",
-					functions = "none",
-					strings = "none",
-					variables = "none",
-				},
-			})
-		end,
-	},
 	{ -- https://github.com/pauchiner/pastelnight.nvim
 		"pauchiner/pastelnight.nvim",
 		lazy = false,
