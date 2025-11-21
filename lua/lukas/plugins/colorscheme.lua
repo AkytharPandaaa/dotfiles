@@ -76,6 +76,31 @@ return {
 			vim.g.everforest_better_performance = true
 		end,
 	},
+	{ -- https://github.com/projekt0n/github-nvim-theme
+		"projekt0n/github-nvim-theme",
+		name = "github-theme",
+		priority = 1000,
+		lazy = false,
+		config = function()
+			require("github-theme").setup({
+				options = {
+					transparent = false,
+					styles = {
+						comments = "NONE",
+						functions = "bold",
+						keywords = "bold",
+						variables = "NONE",
+						conditionals = "bold",
+						constants = "NONE",
+						numbers = "NONE",
+						operators = "NONE",
+						strings = "NONE",
+						types = "bold",
+					},
+				},
+			})
+		end,
+	},
 	{ -- https://github.com/Skardyy/makurai-nvim
 		"Skardyy/makurai-nvim",
 		config = function()
