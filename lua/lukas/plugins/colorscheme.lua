@@ -22,6 +22,7 @@ return {
 			vim.cmd([[colorscheme catppuccin-macchiato]])
 		end,
 	},
+	-- ===========================================================
 	{ -- https://github.com/ribru17/bamboo.nvim
 		"ribru17/bamboo.nvim",
 		lazy = false,
@@ -37,10 +38,12 @@ return {
 			})
 		end,
 	},
+
 	{ -- https://github.com/everviolet/nvim
 		"everviolet/nvim",
 		name = "evergarden",
 		priority = 1000,
+		lazy = false,
 		config = function()
 			require("evergarden").setup({
 				style = {
@@ -52,6 +55,14 @@ return {
 					comment = {},
 				},
 			})
+		end,
+	},
+	{ -- https://github.com/sainnhe/everforest
+		"sainnhe/everforest",
+		priority = 1000,
+		lazy = false,
+		config = function()
+			vim.g.everforest_disable_italic_comment = true
 		end,
 	},
 	{ -- https://github.com/Skardyy/makurai-nvim
