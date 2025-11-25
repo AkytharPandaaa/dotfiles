@@ -4,3 +4,6 @@
 [submodule "plugins/catppuccin"]
 	path = plugins/catppuccin
 	url = https://github.com/catppuccin/fish.git
+[submodule "scripts/PandaUpdater"]
+	path = scripts/PandaUpdater
+	url = https://github.com/IndiePandaaaaa/PandaUpdater.git
