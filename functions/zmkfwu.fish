@@ -1,4 +1,5 @@
 function zmkfwu
+  # zmkfwu short for ZMK firmware update
   if test ! -d .git
     echo "exiting: not running in a git repository"
     return
@@ -16,9 +17,13 @@ function zmkfwu
       set side "left"
   case left
       set side "left"
+  case d
+      set side "dongle"
+  case dongle
+      set side "dongle"
   case '*'
-      set side "left"
-      echo "--- using default case 'left'"
+      set side "dongle"
+      echo "--- using default case 'dongle'"
   end
 
   echo "--- waiting for firmware download"
