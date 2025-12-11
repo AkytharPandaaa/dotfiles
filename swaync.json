@@ -1,8 +1,0 @@
-{
-  "positionX": "center",
-  "positionY": "top",
-  "layer": "overlay",
-  "timeout": 7,
-  "timeout-low": 5,
-  "timeout-critical": 0
-}
