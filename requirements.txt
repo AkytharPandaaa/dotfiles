@@ -8,7 +8,7 @@ rm -rv /usr/share/nvim/runtime/colors/*.vim
 pacman -S --noconfirm neovim ripgrep node lazygit go make
 
 # programs to install on alpine
-apk add neovim ripgrep nodejs lazygit go make
+apk add neovim ripgrep nodejs lazygit go make fzf curl npm rust cargo
 
 # programs to install on ubuntu LTS
 flatpak install io.neovim.nvim
