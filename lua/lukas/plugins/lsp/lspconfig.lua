@@ -376,7 +376,12 @@ return {
 						"typst",
 						"xhtml",
 					},
-					language = { "de-DE" },
+					language = "de-DE",
+					setenceCacheSize = 2000,
+					additionalRules = {
+						enablePickyRules = true,
+						motherTongue = "de-DE",
+					},
 				},
 			},
 		})
