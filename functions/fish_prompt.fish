@@ -32,5 +32,6 @@ function fish_prompt
   #set FLCLR_WRITE_FG
 
   # fishline
-  fishline -s $status CLOCK USERHOST PWD GIT STATUS WRITE ROOT SPACE
+  #fishline -s $status CLOCK USERHOST PWD GIT STATUS WRITE ROOT SPACE
+  fishline -s $status PWD GIT STATUS WRITE SPACE
 end
