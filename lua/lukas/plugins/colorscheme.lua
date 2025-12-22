@@ -44,26 +44,8 @@ return {
 		priority = 1000,
 		config = function()
 			vim.g.edge_disable_italic_comment = true
-			vim.g.edge_style = "default"
+			vim.g.edge_style = "light"
 			vim.g.edge_better_performance = true
-		end,
-	},
-	{ -- https://github.com/everviolet/nvim
-		"everviolet/nvim",
-		name = "evergarden",
-		priority = 1000,
-		lazy = false,
-		config = function()
-			require("evergarden").setup({
-				style = {
-					tabline = { "reverse" },
-					search = { "reverse" },
-					incsearch = { "reverse" },
-					types = {},
-					keyword = {},
-					comment = {},
-				},
-			})
 		end,
 	},
 	{ -- https://github.com/sainnhe/everforest
@@ -71,7 +53,7 @@ return {
 		priority = 1000,
 		lazy = false,
 		config = function()
-			vim.g.everforest_background = "medium"
+			vim.g.everforest_background = "soft"
 			vim.g.everforest_disable_italic_comment = true
 			vim.g.everforest_better_performance = true
 		end,
@@ -164,7 +146,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.g.sonokai_style = "atlantis"
+			vim.g.sonokai_style = "maia"
 			vim.g.sonokai_disable_italic_comment = true
 			vim.g.sonokai_better_performance = true
 		end,
@@ -176,8 +158,8 @@ return {
 		config = function()
 			require("tokyonight").setup({
 				styles = {
-					functions = {},
-					comments = {},
+					functions = { italic = false },
+					comments = { italic = false },
 				},
 			})
 		end,
