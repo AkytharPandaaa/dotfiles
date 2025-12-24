@@ -353,6 +353,7 @@ return {
 				"typst",
 				"xhtml",
 			},
+			-- https://www.reddit.com/r/neovim/comments/z3uxjd/ltexls_uses_wrong_language/
 			flags = { debounce_text_changes = 300 },
 			on_attach = on_attach,
 			settings = {
