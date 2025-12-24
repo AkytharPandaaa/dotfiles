@@ -353,6 +353,8 @@ return {
 				"typst",
 				"xhtml",
 			},
+			flags = { debounce_text_changes = 300 },
+			on_attach = on_attach,
 			settings = {
 				ltex = {
 					enabled = {
