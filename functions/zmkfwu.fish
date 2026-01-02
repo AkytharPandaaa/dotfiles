@@ -22,8 +22,9 @@ function zmkfwu
   case dongle
       set side "dongle"
   case '*'
-      set side "dongle"
-      echo "--- using default case 'dongle'"
+      echo "USAGE: zmkfwu <side>"
+      echo "side options: dongle|left|right"
+      return
   end
 
   echo "--- waiting for firmware download"
