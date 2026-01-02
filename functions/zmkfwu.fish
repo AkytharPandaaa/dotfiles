@@ -5,9 +5,6 @@ function zmkfwu
     return
   end
   
-  git pull
-  set git_hash $(git log --pretty=format:"%h" | head -n1)
-
   switch $argv[1]
   case r
       set side "right"
@@ -26,6 +23,9 @@ function zmkfwu
       echo "side options: dongle|left|right"
       return
   end
+
+  git pull
+  set git_hash $(git log --pretty=format:"%h" | head -n1)
 
   echo "--- waiting for firmware download"
   while test ! -f ~/Downloads/firmware.zip
