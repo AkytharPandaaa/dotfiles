@@ -16,6 +16,7 @@ if status is-interactive
   alias gc "git commit -m"
   alias gd "git diff"
   alias gl "git log --pretty=format:'%h - %an : %s'"
+  alias gll "git log --pretty=format:'%h' | head -n1"
   alias gp "git pull && git push"
   alias gs "git status"
 
