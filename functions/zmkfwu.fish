@@ -39,7 +39,7 @@ function zmkfwu
 
   echo "--- updating firmware on git"
   git add firmware_$git_hash.zip
-  git commit -m "update firmware.zip" -m "updated zip to $git_hash."
+  git commit -m "update firmware.zip: updated firmware to $git_hash."
   
   echo "--- unzipping firmware"
   unzip -q firmware_$git_hash.zip -d firmware_$git_hash
