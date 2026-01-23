@@ -27,10 +27,11 @@ function zmkfwu
   git pull
   set git_hash $(git log --pretty=format:"%h" | head -n1)
 
-  echo "--- waiting for firmware download"
+  echo "---> waiting for firmware download"
   while test ! -f ~/Downloads/firmware.zip
-    sleep 2
+    sleep 1
   end
+  sleep 2 # fixes an issue when the firmware is extracted later
   echo "--- firmware found"
   
   echo "--- moving firmware to $(pwd)"
@@ -48,7 +49,7 @@ function zmkfwu
     return
   end
 
-  sudo echo "--- waiting for controller to show up in flash-mode"
+  sudo echo "---> waiting for controller to show up in flash-mode"
   set device "$(lsblk -o KNAME,MODEL | grep -Po '(sd[a-z0-9]{1,2})(?=\s*\w+\s*UF2)')"
   while test -z $device
     sleep 2
