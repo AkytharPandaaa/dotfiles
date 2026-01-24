@@ -1,11 +1,14 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    set FLINE_PATH $HOME/.config/fish/plugins/fishline
+  # Commands to run in interactive sessions can go here
+  set FLINE_PATH $HOME/.config/fish/plugins/fishline
 
-    # fishline
-    source $FLINE_PATH/init.fish
+  # fishline
+  source $FLINE_PATH/init.fish
 
-    # Aliases
+  # theme
+  fish_config theme choose "Rosé Pine Moon"
+
+  # Aliases
   alias :q "exit"
   alias cp "rsync -avSAXHP"
   alias dd "dd status=progress"
