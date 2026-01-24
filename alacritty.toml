@@ -1,11 +1,12 @@
 [general]
 live_config_reload = true
+import = ["./themes/rose-pine/dist/rose-pine-moon.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 14
+size = 15
 
 [font.normal]
 family = "LilexNerdFont"
