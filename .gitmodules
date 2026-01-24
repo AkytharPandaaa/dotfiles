@@ -1,3 +1,6 @@
 [submodule "catppuccin"]
-	path = catppuccin
+	path = themes/catppuccin
 	url = https://github.com/catppuccin/fuzzel.git
+[submodule "themes/rose-pine"]
+	path = themes/rose-pine
+	url = https://github.com/bomgar/rose-pine-fuzzel.git
