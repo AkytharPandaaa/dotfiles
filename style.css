@@ -5,6 +5,9 @@
  * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
  *
  * =========================================================================== */
+/* @import "./plugins/rose-pine/rose-pine.css"; */
+@import "./plugins/rose-pine/rose-pine-moon.css";
+/* @import "./plugins/rose-pine/rose-pine-dawn.css"; */
 
 /* -----------------------------------------------------------------------------
  * Keyframes
@@ -26,9 +29,7 @@
 }
 
 * {
-  font-family:
-    RecMonoDuotoneNerdFont, "0xProtoNerdFont", RecMonoDuotoneNerdFont,
-    DroidSansMNerdFont, CodeNewRomanNerdFont, monospace;
+  font-family: LilexNerdFont, RecMonoDuotoneNerdFont, monospace;
   font-size: 16px;
   font-weight: 500;
 
