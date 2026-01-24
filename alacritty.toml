@@ -5,16 +5,28 @@ import = ["./themes/rose-pine/dist/rose-pine-moon.toml"]
 [env]
 TERM = "xterm-256color"
 
+[window]
+padding = {x=2, y=2}
+dynamic_padding = true
+decorations = "None"
+opacity = 0.75
+
+[scrolling]
+history = 42000
+
 [font]
+normal = {family="LilexNerdFont", style="Medium"}
 size = 15
 
-[font.normal]
-family = "LilexNerdFont"
-style = "Medium"
+[cursor]
+style = {shape="Block", blinking="Off"}
+unfocused_hollow = true
 
-[terminal.shell]
-program = "/usr/bin/fish"
+[terminal]
+shell = {program="/usr/bin/fish", args=[]}
+osc52 = "CopyPaste"
 
-[window.padding]
-x = 2
-y = 2
+[mouse]
+hide_when_typing = true
+
+# https://alacritty.org/config-alacritty.html#keyboard
