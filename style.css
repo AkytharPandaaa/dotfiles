@@ -1,144 +1,198 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
+/* INSPIRED by https://github.com/DankoFox/dotfiles/blob/1c51259a2b29058d7c445c4821ea5b5a5bf781ab/.config/waybar/style.css */
+
 /* @import "./plugins/rose-pine/rose-pine.css"; */
 @import "./plugins/rose-pine/rose-pine-moon.css";
 /* @import "./plugins/rose-pine/rose-pine-dawn.css"; */
 
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
-/* --------------------------------------------------------------------------
- * Panda colors (inspired by Catppuccin-Frappe)
- * -------------------------------------------------------------------------- */
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
-
-/* Reset all styles */
 * {
   padding: 0;
   margin: 0;
   transition: none;
-}
 
-* {
   font-family: LilexNerdFont, RecMonoDuotoneNerdFont, monospace;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 
   margin-right: 2px;
   margin-left: 2px;
-  border-radius: 2px;
+  /* border-radius: 2px; */
 }
 
 window#waybar {
-  background: transparent;
-  font-weight: 700;
+  background: @surface;
+  color: @text;
 }
 
-#backlight,
-#battery,
-#bluetooth,
-#clock,
-#cpu,
-#disk,
-#idle_inhibitor,
-#memory,
-#mpris,
-#network,
+tooltip {
+  background: @base;
+
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: @overlay;
+}
+
+#workspaces {
+  background: @base;
+  border-radius: 8px;
+  margin-left: 10px;
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
+#workspaces button {
+  padding: 2px;
+  color: @highlightMed;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  color: @text;
+}
+
+#workspaces button.focused {
+  color: @subtile;
+  background: @love;
+  border-radius: 8px;
+}
+
+#workspaces button.urgent {
+  color: @base;
+  background: @pine;
+  border-radius: 8px;
+}
+
+#workspaces button:hover {
+  background: @highlightLow;
+  color: @text;
+  border-radius: 8px;
+}
+
 #power-profiles-daemon,
-#pulseaudio,
-#temperature,
-#temperature.gpu,
-#temperature.ssd,
-#tray,
-#workspaces,
-#custom-launcher,
-#custom-gpu-usage,
-#custom-power,
-#custom-pacman,
-#custom-notification,
-#custom-updates,
-#custom-hypridle,
-#custom-exit {
-  padding-left: 7px;
-  padding-right: 7px;
-  margin-bottom: 2px;
-}
-
-#workspaces,
-#workspaces button,
-#workspaces button.active,
-#workspaces button.empty,
-#workspaces button.hosting-monitor,
-#workspaces button.persistent,
-#workspaces button.special,
-#workspaces button.urgent,
-#workspaces button.visible {
-  padding-left: 2px;
-  padding-right: 2px;
-}
-
-/* text-light */
-* {
-  color: #eeeeee;
-}
-
-/* text-dark */
-#workspaces button.visible {
-  color: #343434;
-}
-
-/* background-light */
-#workspaces button.visible {
-  background-color: #dddddd;
-}
-/* background-dark */
-#clock,
-#battery,
-#cpu,
-#disk,
-#memory,
-#idle_inhibitor,
-#temperature,
-#temperature.gpu,
-#temperature.ssd,
-#backlight,
-#network,
-#pulseaudio,
-#tray,
-#bluetooth,
-#power-profiles-daemon,
-#mpris,
-#custom-launcher,
-#custom-gpu-usage,
-#custom-power,
-#custom-pacman,
-#custom-notification,
-#custom-updates,
-#custom-hypridle,
-#custom-exit,
+#custom-notifications,
 #window,
-#workspaces,
-#workspaces button,
+#cpu,
+#disk,
+#custom-gpu-temp,
+#custom-updates,
+#mpris,
 #clock,
-#tray {
-  background-color: #505050;
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#tray,
+#memory,
+#backlight {
+  background: @base;
+  opacity: 0.9;
+  padding: 0px 5px;
+  margin: 0px 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-/* lime */
-#clock,
-#tray {
-  color: #77dd77;
+#custom-updates {
+  color: @rose;
+  padding: 0px 10px;
+  border-radius: 8px 8px 8px 8px;
 }
-/* red */
-#battery.critical:not(.charging) {
-  color: #ff7777;
+
+#cpu,
+#memory,
+#disk {
+  color: @foam;
+}
+
+#cpu {
+  border-radius: 8px 0px 0px 8px;
+  margin-left: 5px;
+}
+
+#disk {
+  border-radius: 0px 8px 8px 0px;
+}
+
+#temperature,
+#custom-gpu-temp {
+  color: @gold;
+}
+
+#temperature {
+  border-radius: 8px 0px 0px 8px;
+  margin-left: 5px;
+}
+
+#temperature.critical {
+  color: @love;
+}
+
+#custom-gpu-temp {
+  border-radius: 0px 8px 8px 0px;
+}
+
+#backlight {
+  color: @text;
+  border-radius: 0px 8px 8px 0px;
+  margin-right: 20px;
+}
+
+#tray {
+  border-radius: 8px;
+  margin-left: 5px;
+}
+
+#mpris {
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 0px;
+}
+
+#window {
+  border-radius: 8px;
+  margin-left: 5px;
+}
+
+window#waybar.empty {
+  background-color: transparent;
+}
+
+window#waybar.empty #window {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background-color: transparent;
+}
+
+#clock {
+  color: @subtle;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+#pulseaudio,
+#bluetooth,
+#network,
+#power-profiles-daemon,
+#battery {
+  color: @iris;
+}
+
+#pulseaudio {
+  border-radius: 8px 0px 0px 8px;
+  margin-left: 5px;
+}
+
+#power-profiles-daemon {
+  border-radius: 0px 8px 8px 0px;
+  padding: 0px 10px;
+}
+
+#custom-notifications {
+  background: transparent;
+  padding: 0px 10px 0px 5px;
+  border-radius: 8px 8px 8px 8px;
+  margin-left: 5px;
 }
