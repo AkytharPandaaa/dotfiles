@@ -12,13 +12,13 @@
   ],
   "modules-center": [],
   "modules-right": [
+    "custom/updates",
     "cpu",
     "memory",
     // "custom/gpu-usage", // not working *shrug*
     "disk",
     "temperature#cpu",
     "custom/gpu-temp",
-    "custom/updates",
     "tray",
     "pulseaudio",
     "bluetooth",
