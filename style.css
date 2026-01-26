@@ -1,7 +1,7 @@
 /* https://github.com/ErikReider/Linux/blob/master/dotfiles/.config/swaync/style.css */
 
 :root {
-  --border-radius: 22px;
+  --border-radius: 8px;
   --cc-bg: transparent;
 
   --widget-background: rgba(46, 46, 46, 0.7);
