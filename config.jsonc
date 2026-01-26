@@ -124,7 +124,7 @@
   },
   "custom/gpu-temp": {
     "exec": "nvidia-smi | grep -Po \"[0-9]+(?=C)\"",
-    "format": "  {}°C",
+    "format": "󰢮 {}°C",
     "tooltip-format": "GPU temperature",
     "return-type": "",
     "interval": 2
