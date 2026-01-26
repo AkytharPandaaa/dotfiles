@@ -90,18 +90,18 @@
     "interval": 1
   },
   "cpu": {
-    "format": "{usage:2}% ",
+    "format": "{usage:2}%  ",
     "tooltip": "CPU usage",
     "interval": 2
   },
   "memory": {
-    "format": "{}% ",
+    "format": "{:2}%  ",
     "tooltip-format": "RAM:  {used:5}/{total:5} GiB\nSwap: {swapUsed:5}/{swapAvail:5} GiB",
     "on-click-right": "gnome-system-monitor",
     "interval": 2
   },
   "disk": {
-    "format": "󰆼 {percentage_used}%",
+    "format": "{percentage_used}% 󰆼",
     "tooltip-format": "{path}: {used}/{total} ({percentage_used}%)",
     "path": "/home/panda",
     "on-click-right": "baobab {path}",
