@@ -1,4 +1,5 @@
 {
+  "source": "https://github.com/ErikReider/Linux/tree/master/dotfiles/.config/swaync",
   "$schema": "/etc/xdg/swaync/configSchema.json",
 
   "positionX": "right",
