@@ -222,7 +222,7 @@
   },
   "custom/notifications": {
     "tooltip-format": "Left: Notifications\nRight: Do not disturb",
-    "format": "{icon} ",
+    "format": "{icon}",
     "format-icons": {
       "notification": "",
       "none": "",
