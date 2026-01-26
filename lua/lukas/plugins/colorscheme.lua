@@ -136,7 +136,7 @@ return {
 				styles = {
 					bold = true,
 					italic = false,
-					transparent = false,
+					transparent = true,
 				},
 			})
 		end,
