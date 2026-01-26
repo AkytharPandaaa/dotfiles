@@ -56,8 +56,8 @@
       "1": "1",
       "2": "2",
       "3": "3",
-      "4": "4",
-      "5": "5",
+      "4": "",
+      "5": "",
       "6": "6",
       "7": "7",
       "8": "8",
@@ -139,8 +139,8 @@
   "network": {
     "format": "{ifname}",
     "format-wifi": "󱚽 {essid}",
-    "format-ethernet": "",
-    "format-disconnected": "󱘖",
+    "format-ethernet": "󰱓",
+    "format-disconnected": "󰅛",
     "tooltip-format": "Network: {ifname} via {gwaddri}",
     "tooltip-format-wifi": "Wireless: {ifname} @ {essid}\nIP: {ipaddr}/{cidr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nBytes {bandwidthUpBytes:7}󰁝 {bandwidthDownBytes:7}󰁅\nBits  {bandwidthUpBits:7}󰁝 {bandwidthDownBits:7}󰁅",
     "tooltip-format-ethernet": "Network: {ifname}\nIP: {ipaddr}/{cidr}\nBytes {bandwidthUpBytes:7}󰁝 {bandwidthDownBytes:7}󰁅\nBits  {bandwidthUpBits:7}󰁝 {bandwidthDownBits:7}󰁅",
@@ -206,7 +206,7 @@
     ]
   },
   "mpris": {
-    "format": "{player_icon}{title} - {artist}",
+    "format": "{player_icon} {title} - {artist}",
     "format-paused": " {title} - {artist}",
     "on-click": "playerctl play-pause",
     "on-click-middle": "playerctl previous",
@@ -214,9 +214,10 @@
     "max-length": 30,
     "interval": 1,
     "player-icons": {
-      "default": " ",
-      "firefox": "󰈹 ",
-      "brave": "󰕃 "
+      "default": "",
+      "firefox": "󰈹",
+      "brave": "󰕃",
+      "Lollypop": ""
     }
   },
   "custom/notifications": {
@@ -245,7 +246,7 @@
     "format-icons": {
       "default": "0",
       "performance": "",
-      "balanced": "",
+      "balanced": "",
       "power-saver": ""
     }
   },
