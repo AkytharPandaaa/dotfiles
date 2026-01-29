@@ -1,0 +1,3 @@
+[submodule "plugins/rose-pine"]
+	path = plugins/rose-pine
+	url = https://github.com/rose-pine/hyprland.git
