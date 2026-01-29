@@ -2,9 +2,10 @@ function setup_ssh_agent
   # thanks to Lorenzo Bettini for the inspiration
   # https://www.lorenzobettini.it/2023/09/hyprland-and-ssh-agent/
 
-  if test -e ~/.config/ssh
+  if not test -e ~/.ssh/config
     echo "added local ssh config"
-    touch ~/.config/ssh
+    mkdir -p ~/.ssh
+    touch ~/.ssh/config
   end
 
   if grep -q AddKeysToAgent ~/.ssh/config
