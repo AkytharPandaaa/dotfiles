@@ -133,12 +133,6 @@ tooltip {
   border-radius: 0px 8px 8px 0px;
 }
 
-#backlight {
-  color: @text;
-  border-radius: 0px 8px 8px 0px;
-  margin-right: 20px;
-}
-
 #tray {
   border-radius: 8px;
   margin-left: 5px;
@@ -176,6 +170,7 @@ window#waybar.empty #window {
 #bluetooth,
 #network,
 #power-profiles-daemon,
+#backlight,
 #battery {
   color: @iris;
 }
