@@ -1,37 +1,3 @@
-function fish_prompt
-  ### CLOCK
-  #set FLCLR_CLOCK_BG
-  #set FLCLR_CLOCK_FG
-
-  ### GIT
-  #set FLCLR_GIT_BG_CLEAN
-  #set FLCLR_GIT_FG_CLEAN
-  #set FLCLR_GIT_BG_DIRTY
-  #set FLCLR_GIT_FG_DIRTY
-  #set FLCLR_GIT_BG_DETACHED
-  #set FLCLR_GIT_FG_DETACHED
-
-  ### PWD
-  #set FLCLR_PWD_BG
-  #set FLCLR_PWD_FG
-  #set FLCLR_PWD_BG_HOME
-  #set FLCLR_PWD_FG_HOME
-
-  ### ROOT
-  #set FLCLR_ROOT_BG_USER
-  #set FLCLR_ROOT_FG_USER
-  #set FLCLR_ROOT_BG_ROOT $fish_color_cwd_root
-  #set FLCLR_ROOT_FG_ROOT
-
-  ### STATUS
-  #set FLCLR_STATUS_BG
-  #set FLCLR_STATUS_FG
-
-  ### WRITE
-  #set FLCLR_WRITE_BG
-  #set FLCLR_WRITE_FG
-
-  # fishline
-  #fishline -s $status CLOCK USERHOST PWD GIT STATUS WRITE ROOT SPACE
-  fishline -s $status PWD GIT STATUS WRITE SPACE
+function fish_prompt --description Hydro
+    echo -e -n "$_hydro_color_start$hydro_symbol_start$hydro_color_normal$_hydro_color_pwd$_hydro_pwd$hydro_color_normal $_hydro_color_git$$_hydro_git$hydro_color_normal$_hydro_color_duration$_hydro_cmd_duration$hydro_color_normal$_hydro_status$hydro_color_normal "
 end

@@ -1,12 +1,12 @@
 if status is-interactive
-  # Commands to run in interactive sessions can go here
-  set FLINE_PATH $HOME/.config/fish/plugins/fishline
+# theme
+fish_config theme choose "Rosé Pine Moon Auto"
 
-  # fishline
-  source $FLINE_PATH/init.fish
+# hydro
+set --global hydro_symbol_prompt ">"
+set --global hydro_symbol_git_dirty " x"
 
-  # theme
-  fish_config theme choose "Rosé Pine Moon"
+set --global hydro_multiline true
 
   # Aliases
   alias :q "exit"
@@ -23,5 +23,4 @@ if status is-interactive
   alias gll "git log --pretty=format:'%h' | head -n1"
   alias gp "git pull && git push"
   alias gs "git status"
-
 end
