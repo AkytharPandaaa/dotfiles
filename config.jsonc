@@ -12,7 +12,7 @@
   ],
   "modules-center": [],
   "modules-right": [
-    "custom/updates",
+    "custom/pacman",
     "cpu",
     "memory",
     // "custom/gpu-usage", // not working *shrug*
@@ -274,10 +274,14 @@
       "power-saver": ""
     }
   },
-  "custom/updates": {
-    "format": "{} ",
-    "interval": 150,
-    "exec": "checkupdates-with-aur | wc -l",
-    "exec-if": "exit 0"
+  "custom/pacman": {
+    "format": "{icon}{0}",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": "",
+      "updated": ""
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates --interval 300"
   }
 }

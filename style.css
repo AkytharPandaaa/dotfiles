@@ -74,7 +74,7 @@ tooltip {
 #cpu,
 #disk,
 #custom-gpu-temp,
-#custom-updates,
+#custom-pacman,
 #mpris,
 #clock,
 #battery,
@@ -94,10 +94,13 @@ tooltip {
   margin-bottom: 5px;
 }
 
-#custom-updates {
-  color: @rose;
-  padding: 0px 10px;
+#custom-pacman {
+  color: #a6da95;
+  padding: 0px 12px;
   border-radius: 8px 8px 8px 8px;
+}
+#custom-pacman.pending-updates {
+  color: @rose;
 }
 
 #cpu,
