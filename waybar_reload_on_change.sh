@@ -21,6 +21,9 @@ while true; do
     # kill waybar
     killall waybar
 
+    echo ""
+    echo "=================================================================="
+
     # start waybar
     waybar &
 
