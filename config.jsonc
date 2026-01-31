@@ -275,7 +275,7 @@
     }
   },
   "custom/pacman": {
-    "format": "{icon}{0}",
+    "format": "{0} {icon}",
     "return-type": "json",
     "format-icons": {
       "pending-updates": "",
