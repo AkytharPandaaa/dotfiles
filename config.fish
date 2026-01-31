@@ -5,8 +5,11 @@ if status is-interactive
   # hydro
   set --global hydro_symbol_prompt ">"
   set --global hydro_symbol_git_dirty " x"
-  
   set --global hydro_multiline true
+
+  # sponge
+  set sponge_successful_exit_codes 0 127
+  set sponge_purge_only_on_exit true
 
   ### ALIASES
   # general
