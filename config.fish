@@ -27,7 +27,7 @@ if status is-interactive
 
 
   # sponge
-  set sponge_successful_exit_codes 0 127
+  set sponge_successful_exit_codes 0 127 255
   set sponge_purge_only_on_exit true
 
   ### ALIASES
@@ -46,5 +46,5 @@ if status is-interactive
   alias gl "git log --pretty=format:'%h - %an : %s'"
   alias gll "git log --pretty=format:'%h' | head -n1"
   alias gp "git pull && git push"
-  alias gs "git status"
+  alias gs "git status -sb"
 end
