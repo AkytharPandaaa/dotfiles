@@ -21,6 +21,7 @@ if status is-interactive
   set --global hydro_color_duration "#3e8fb0"
 
   set --global hydro_symbol_prompt "|>"
+  set --global hydro_symbol_start " "
   set --global hydro_multiline true
   set --global fish_prompt_pwd_dir_length 3
 
@@ -35,7 +36,7 @@ if status is-interactive
   alias :qa "exit"
   alias cp "rsync -avSAXHP"
   alias dd "dd status=progress"
-  alias eza "eza --icons --long --all"
+  alias eza "eza --icons"
   alias yay "yay --sudoloop"
   alias fixmypdf "ocrmypdf -l deu+eng+fra --rotate-pages --clean --clean-final --skip-text --optimize 2 --jpeg-quality 70 --png-quality 70 --jbig2-lossy"
 
