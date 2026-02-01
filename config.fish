@@ -3,9 +3,27 @@ if status is-interactive
   fish_config theme choose "Rosé Pine Moon Auto"
   
   # hydro
-  set --global hydro_symbol_prompt ">"
-  set --global hydro_symbol_git_dirty " x"
+  #set --global hydro_color_pwd "#$(echo $fish_color_gold | grep -Po [0-9af]{6})"
+  # Rosé Pine colors
+  # fish_color_subtle #908caa
+  # fish_color_text #e0def4
+  # fish_color_love #eb6f92
+  # fish_color_gold #f6c177
+  # fish_color_rose #ea9a97
+  # fish_color_pine #3e8fb0
+  # fish_color_foam #9ccfd8
+  # fish_color_iris #c4a7e7
+  set --global hydro_color_pwd "#f6c177"
+  set --global hydro_color_git "#c4a7e7"
+  set --global hydro_color_start "#9ccfd8"
+  set --global hydro_color_error "#eb6f92"
+  set --global hydro_color_prompt "#908caa"
+  set --global hydro_color_duration "#3e8fb0"
+
+  set --global hydro_symbol_prompt "|>"
   set --global hydro_multiline true
+  set --global fish_prompt_pwd_dir_length 3
+
 
   # sponge
   set sponge_successful_exit_codes 0 127
