@@ -22,7 +22,7 @@ if status is-interactive
 
   set --global hydro_symbol_prompt "|>"
   set --global hydro_symbol_start " "
-  set --global hydro_multiline true
+  set --global hydro_multiline false
   set --global fish_prompt_pwd_dir_length 3
 
 
