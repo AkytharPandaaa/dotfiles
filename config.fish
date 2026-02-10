@@ -32,13 +32,13 @@ if status is-interactive
 
   ### ALIASES
   # general
-  alias :q "exit"
   alias :qa "exit"
-  alias cp "rsync -avSAXHP"
   alias dd "dd status=progress"
+  alias dskspeed "sudo echo \"running write test:\" && sudo dd bs=100M count=50 oflag=dsync if=/dev/zero"
   alias eza "eza --icons"
-  alias yay "yay --sudoloop"
   alias fixmypdf "ocrmypdf -l deu+eng+fra --rotate-pages --clean --clean-final --skip-text --optimize 2 --jpeg-quality 70 --png-quality 70 --jbig2-lossy"
+  alias rsync "rsync -avSAXHP"
+  alias yay "yay --sudoloop"
 
   # git
   alias gc "git commit -m"
