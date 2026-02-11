@@ -236,6 +236,10 @@
     "on-click-middle": "playerctl previous",
     "on-click-right": "playerctl next",
     "max-length": 30,
+    "ignored-players": [
+      "brave",
+      "firefox"
+    ],
     "interval": 1,
     "player-icons": {
       "default": "",
