@@ -4,7 +4,7 @@ function magic-enter-cmd --description "Customize your own magic-commands"
     
     # git dir magic command
     if command git rev-parse --is-inside-work-tree &>/dev/null
-        set my_magic_command "git status -sb"
+        set my_magic_command "git pull; gs; echo \"===========\"; eza --long --all"
     end
     
     # look for something else, like an .env directory
