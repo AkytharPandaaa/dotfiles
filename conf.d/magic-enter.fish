@@ -1,9 +1,18 @@
 function magic-enter-cmd --description "Print the command to run when no command was given"
-    set -l cmd ls
+    set --local my_magic_command 'eza --icons --all'
+    
+    # git dir magic command
     if command git rev-parse --is-inside-work-tree &>/dev/null
-        set cmd "git status -sb"
+        set my_magic_command "git pull; gs; echo \"===========\"; eza --long --all"
     end
-    echo $cmd
+    
+    # look for something else, like an .env directory
+    # or whatever other magic commands you need
+    # ...
+    
+    # be sure not to actually run the command
+    # just print it out
+    echo $my_magic_command
 end
 
 function magic-enter
