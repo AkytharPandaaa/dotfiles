@@ -3,6 +3,7 @@ function gua
     if test -e "$dir/.git"
       echo "updating: $dir"
       cd "$dir"
+      git fetch
       git pull
       git submodule update --init --recursive
       cd ..
