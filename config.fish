@@ -1,6 +1,6 @@
 if status is-interactive
   # theme
-  fish_config theme choose "Rosé Pine Moon Auto"
+    fish_config theme choose --color-theme=dark "Rosé Pine Moon Auto"
   
   # hydro
   #set --global hydro_color_pwd "#$(echo $fish_color_gold | grep -Po [0-9af]{6})"
