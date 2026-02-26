@@ -92,12 +92,13 @@
   "cpu": {
     "format": "{usage:2}%  ",
     "tooltip": "CPU usage",
+    "on-click-right": "btop",
     "interval": 2
   },
   "memory": {
     "format": "{:2}%  ",
     "tooltip-format": "RAM:  {used:5}/{total:5} GiB\nSwap: {swapUsed:5}/{swapAvail:5} GiB",
-    "on-click-right": "gnome-system-monitor",
+    "on-click-right": "htop",
     "interval": 2
   },
   "disk": {
