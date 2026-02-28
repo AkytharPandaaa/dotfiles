@@ -239,7 +239,8 @@
     "max-length": 30,
     "ignored-players": [
       "brave",
-      "firefox"
+      "firefox",
+      "plasma-browser-integration"
     ],
     "interval": 1,
     "player-icons": {
