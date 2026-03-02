@@ -34,6 +34,7 @@ return {
 				"c_sharp",
 				"cpp",
 				"css",
+				"devicetree",
 				"dockerfile",
 				"gdscript",
 				"gitignore",
