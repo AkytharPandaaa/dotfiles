@@ -117,14 +117,14 @@
     "interval": 2
   },
   "custom/gpu-usage": {
-    "exec": "command -v nvidia-smi && nvidia-smi | grep -Po \"[0-9]+(?=%\\s+[0-9]+C)\"",
+    "exec": "command -v nvidia-smi >/dev/null && nvidia-smi | grep -Po \"[0-9]+(?=%\\s+[0-9]+C)\"",
     "format": "  {}%",
     "tooltip-format": "GPU usage",
     "return-type": "",
     "interval": 2
   },
   "custom/gpu-temp": {
-    "exec": "command -v nvidia-smi && nvidia-smi | grep -Po \"[0-9]+(?=C)\"",
+    "exec": "command -v nvidia-smi >/dev/null && nvidia-smi | grep -Po \"[0-9]+(?=C)\"",
     "format": "󰢮 {}°C",
     "tooltip-format": "GPU temperature",
     "return-type": "",
