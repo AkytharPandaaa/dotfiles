@@ -6,7 +6,7 @@ layout = "SpaceAround"
 width = "auto"
 
 toggle_scanning = "s"
-esc_quit = false  # Set to true to enable Esc key to quit the app
+esc_quit = true  # Set to true to enable Esc key to quit the app
 
 [adapter]
 toggle_pairing = "p"
@@ -17,4 +17,4 @@ toggle_discovery = "d"
 unpair = "u"
 toggle_trust = "t"
 toggle_favorite = "f"
-rename = "e"
+rename = "r"
