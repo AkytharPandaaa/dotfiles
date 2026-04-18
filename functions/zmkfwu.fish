@@ -35,13 +35,8 @@ function zmkfwu
   echo "--- firmware found"
   
   echo "--- moving firmware to $(pwd)"
-  git rm firmware_*.zip
   mv -v ~/Downloads/firmware.zip ./firmware_$git_hash.zip
 
-  echo "--- updating firmware on git"
-  git add firmware_$git_hash.zip
-  git commit -m "update firmware.zip: updated firmware to $git_hash."
-  
   echo "--- unzipping firmware"
   unzip -q firmware_$git_hash.zip -d firmware_$git_hash
   if test ! -d firmware_$git_hash
@@ -65,9 +60,10 @@ function zmkfwu
   sudo umount /mnt
   rm -rv ./firmware_$git_hash/
 
-  echo "--- pushing updated firmware"
-  git push
-
-  echo "--- git status"
-  git status
+  # echo "--- updating firmware on git"
+  git rm firmware_*.zip
+  # git add firmware_$git_hash.zip
+  # git commit -m "update firmware.zip: updated firmware to $git_hash."
+  # git push
+  # git status
 end
