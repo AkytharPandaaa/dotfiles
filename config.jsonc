@@ -7,7 +7,7 @@
   // MODULES:
   "modules-left": [
     "hyprland/workspaces",
-    "mpris",
+    // "mpris",
     "hyprland/window"
   ],
   "modules-center": [],
