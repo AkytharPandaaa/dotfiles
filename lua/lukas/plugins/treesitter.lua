@@ -11,6 +11,15 @@ return {
 		-- import nvim-treesitter plugin
 		local treesitter = require("nvim-treesitter")
 
+		-- highlighting
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = { "<filetype>" },
+			callback = function()
+				vim.treesitter.start()
+				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+			end,
+		})
+
 		-- pre-installed language parsers
 		treesitter.install({
 			"angular",
