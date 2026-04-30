@@ -238,13 +238,13 @@ return {
 			root_markers = { ".git" },
 		})
 
-		---		-- fish_lsp
-		---		vim.lsp.config("fish_lsp", {
-		---			cmd = { "fish-lsp", "start" },
-		---			cmd_env = { fish_lsp_show_client_popups = false },
-		---			filetypes = { "fish" },
-		---			root_markers = { ".git" },
-		---		})
+		-- fish_lsp
+		vim.lsp.config("fish_lsp", {
+			cmd = { "fish-lsp", "start" },
+			cmd_env = { fish_lsp_show_client_popups = false },
+			filetypes = { "fish" },
+			root_markers = { ".git" },
+		})
 
 		-- graphql
 		vim.lsp.config("graphql", {
@@ -261,6 +261,7 @@ return {
 				"c",
 				"cpp",
 				"cs",
+				"fish",
 				"gitcommit",
 				"go",
 				"html",
@@ -316,77 +317,6 @@ return {
 				provideFormatter = true,
 			},
 			root_markers = { ".git" },
-		})
-
-		---		-- lsp_ai
-		---		vim.lsp.config("lsp_ai", {
-		---			cmd = { "lsp-ai" },
-		---			filetypes = {},
-		---			init_options = {
-		---				memory = {
-		---					file_store = vim.empty_dict(),
-		---				},
-		---				models = vim.empty_dict(),
-		---			},
-		---		})
-
-		-- ltex_plus
-		vim.lsp.config("ltex_plus", {
-			cmd = { "ltex-ls-plus" },
-			filetypes = {
-				"bib",
-				"context",
-				"gitcommit",
-				"html",
-				"markdown",
-				"org",
-				"pandoc",
-				"plaintex",
-				"quarto",
-				"mail",
-				"mdx",
-				"rmd",
-				"rnoweb",
-				"rst",
-				"tex",
-				"text",
-				"typst",
-				"xhtml",
-			},
-			-- https://www.reddit.com/r/neovim/comments/z3uxjd/ltexls_uses_wrong_language/
-			flags = { debounce_text_changes = 300 },
-			on_attach = on_attach,
-			settings = {
-				ltex = {
-					enabled = {
-						"bib",
-						"context",
-						"gitcommit",
-						"html",
-						"latex",
-						"mail",
-						"markdown",
-						"mdx",
-						"org",
-						"pandoc",
-						"plaintex",
-						"quarto",
-						"rmd",
-						"rnoweb",
-						"rst",
-						"tex",
-						"text",
-						"typst",
-						"xhtml",
-					},
-					language = "de-DE",
-					setenceCacheSize = 2000,
-					additionalRules = {
-						enablePickyRules = true,
-						motherTongue = "de-DE",
-					},
-				},
-			},
 		})
 
 		-- lua_ls
@@ -455,18 +385,18 @@ return {
 				return vim.fn.getcwd()
 			end,
 
-			-- root_markers = { ".sln", ".csproj", "omnisharp.json", "function.json" },
-			--			settings = {
-			--				FormattingOptions = {
-			--					EnableEditorConfigSupport = true,
-			--				},
-			--				MsBuild = {},
-			--				RenameOptions = {},
-			--				RoslynExtensionsOptions = {},
-			--				Sdk = {
-			--					IncludePrereleases = true,
-			--				},
-			--			},
+			root_markers = { ".sln", ".csproj", "omnisharp.json", "function.json" },
+			settings = {
+				FormattingOptions = {
+					EnableEditorConfigSupport = true,
+				},
+				MsBuild = {},
+				RenameOptions = {},
+				RoslynExtensionsOptions = {},
+				Sdk = {
+					IncludePrereleases = true,
+				},
+			},
 		})
 
 		-- openscad_lsp
