@@ -27,19 +27,15 @@ return {
 			-- List of servers for mason to install
 			automatic_installation = {},
 			ensure_installed = {
-				"angularls",
 				"ansiblels",
 				"arduino_language_server",
 				"asm_lsp",
-				"astro",
 				"bashls",
 				"cmake",
 				"cssls",
 				"docker_compose_language_service",
 				"dockerls",
-				"emmet_ls",
 				"fish_lsp",
-				"graphql",
 				"harper_ls",
 				"html",
 				"hyprls",
@@ -49,13 +45,9 @@ return {
 				"millet",
 				"omnisharp",
 				"openscad_lsp",
-				"postgres_lsp",
 				"powershell_es",
-				"prismals",
 				"pyright",
-				"svelte",
 				"tailwindcss",
-				"vtsls",
 				"yamlls",
 			},
 		})
@@ -69,9 +61,10 @@ return {
 				"isort", -- python formatter
 				"prettier", -- prettier formatter
 				"pylint", -- python linter
-				"shfmt", -- sh formatter
+				"beautysh", -- sh formatter
 				"stylua", -- lua formatter
 				"tex-fmt", -- latex formatter
+				"asmft", -- assembly formatter
 			},
 			auto_update = true, -- default: false, automatic tool updates
 			run_on_start = true, -- default: true, install/update on startup
