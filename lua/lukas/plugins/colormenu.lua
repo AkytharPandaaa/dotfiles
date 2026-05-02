@@ -5,13 +5,12 @@ return {
 		require("themery").setup({
 			-- add the config here
 			themes = {
-				{ name = "[dark] Everforest", colorscheme = "everforest" },
-				{ name = "[dark] Pastelnight", colorscheme = "pastelnight" },
-				{ name = "[dark] Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
 				{ name = "[dark] TokyoNight Storm", colorscheme = "tokyonight-storm" },
+				{ name = "[dark] Pastelnight", colorscheme = "pastelnight" },
+				{ name = "[dark] Everforest", colorscheme = "everforest" },
 				{ name = "[dark] Rosé Pine Moon", colorscheme = "rose-pine-moon" },
 				{ name = "[light] Rosé Pine Dawn", colorscheme = "rose-pine-dawn" },
-				{ name = "[light] Catppuccin Latte", colorscheme = "catppuccin-latte" },
+				{ name = "[light] Material", colorscheme = "material-lighter" },
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.
 		})
