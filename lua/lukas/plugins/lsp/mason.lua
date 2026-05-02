@@ -31,7 +31,6 @@ return {
 				"arduino_language_server",
 				"asm_lsp",
 				"bashls",
-				"cmake",
 				"cssls",
 				"docker_language_server",
 				"docker_compose_language_service",
