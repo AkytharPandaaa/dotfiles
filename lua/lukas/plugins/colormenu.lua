@@ -5,29 +5,13 @@ return {
 		require("themery").setup({
 			-- add the config here
 			themes = {
-				-- { name = "[dark] Bamboo", colorscheme = "bamboo-vulgaris" },
-				-- { name = "[dark] Dracula", colorscheme = "dracula" },
-				{ name = "[dark] Sonokai", colorscheme = "sonokai" },
 				{ name = "[dark] Everforest", colorscheme = "everforest" },
-				-- { name = "[dark] GitHub Dimmed", colorscheme = "github_dark_dimmed" },
-				-- { name = "[dark] Makurai Autumn", colorscheme = "makurai_autumn" },
-				-- { name = "[dark] Nordic", colorscheme = "nordic" },
-				-- { name = "[dark] OceanicNext", colorscheme = "OceanicNext" },
 				{ name = "[dark] Pastelnight", colorscheme = "pastelnight" },
+				{ name = "[dark] Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
+				{ name = "[dark] TokyoNight Storm", colorscheme = "tokyonight-storm" },
 				{ name = "[dark] Rosé Pine Moon", colorscheme = "rose-pine-moon" },
-				-- { name = "[dark] TokyoNight Moon", colorscheme = "tokyonight-moon" },
-				-- { name = "[dark] TokyoNight Storm", colorscheme = "tokyonight-storm" },
-				-- { name = "[dark] Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
-				-- { name = "[dark] Catppuccin Frappe", colorscheme = "catppuccin-frappe" },
-				-- { name = "[light] Catppuccin Latte", colorscheme = "catppuccin-latte" },
-				-- { name = "[light] Bamboo", colorscheme = "bamboo-light" },
-				-- { name = "[light] Edge", colorscheme = "edge" },
-				-- { name = "[light] Makurai", colorscheme = "makurai_light" },
-				-- { name = "[light] Nord", colorscheme = "nord" },
-				-- { name = "[light] OceanicNext", colorscheme = "OceanicNextLight" },
 				{ name = "[light] Rosé Pine Dawn", colorscheme = "rose-pine-dawn" },
-				{ name = "[light] Perpetua", colorscheme = "perpetua-light" },
-				-- { name = "[light] TokyoNight", colorscheme = "tokyonight-day" },
+				{ name = "[light] Catppuccin Latte", colorscheme = "catppuccin-latte" },
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.
 		})
