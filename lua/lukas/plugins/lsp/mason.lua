@@ -33,6 +33,7 @@ return {
 				"bashls",
 				"cmake",
 				"cssls",
+				"docker_language_server",
 				"docker_compose_language_service",
 				"dockerls",
 				"fish_lsp",
@@ -54,17 +55,21 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"asmfmt", -- assembly formatter
 				"ast-grep", -- c, java, c#, formatter
 				"autopep8", -- python formatter
+				"beautysh", -- sh formatter
 				"black", -- python formatter
-				"eslint_d", -- js linter
 				"isort", -- python formatter
 				"prettier", -- prettier formatter
-				"pylint", -- python linter
-				"beautysh", -- sh formatter
 				"stylua", -- lua formatter
 				"tex-fmt", -- latex formatter
-				"asmft", -- assembly formatter
+
+				"ansible-lint", -- ansible linter
+				"jsonlint", -- json linter
+				"markdownlint-cli2", -- markdown linter
+				"pylint", -- python linter
+				"vale", -- latex linter
 			},
 			auto_update = true, -- default: false, automatic tool updates
 			run_on_start = true, -- default: true, install/update on startup
