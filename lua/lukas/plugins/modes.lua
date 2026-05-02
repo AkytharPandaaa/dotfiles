@@ -1,18 +1,16 @@
 return {
 	"mvllow/modes.nvim",
-	tag = "v0.2.1",
+	tag = "v0.3.0",
 	config = function()
 		require("modes").setup({
 			colors = {
 				bg = "", -- Optional bg param, defaults to Normal hl group
-				copy = "#f5c359",
-				delete = "#c75c6a",
-				change = "#c75c6a", -- Optional param, defaults to delete
-				format = "#c79585",
-				insert = "#78ccc5",
-				replace = "#245361",
-				select = "#9745be", -- Optional param, defaults to visual
-				visual = "#9745be",
+				copy = "#f6c177",
+				delete = "#eb6f92",
+				format = "#ea9a97",
+				insert = "#9ccfd8",
+				replace = "#3e8fb0",
+				visual = "#c4a7e7",
 			},
 
 			-- Set opacity for cursorline and number background
