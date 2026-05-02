@@ -6,10 +6,12 @@ return {
 			colors = {
 				bg = "", -- Optional bg param, defaults to Normal hl group
 				copy = "#f6c177",
+				change = "#eb6f92",
 				delete = "#eb6f92",
 				format = "#ea9a97",
 				insert = "#9ccfd8",
 				replace = "#3e8fb0",
+				select = "#c4a7e7",
 				visual = "#c4a7e7",
 			},
 
