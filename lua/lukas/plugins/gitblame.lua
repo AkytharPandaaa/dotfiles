@@ -10,8 +10,8 @@ return {
 		-- your configuration comes here
 		-- for example
 		enabled = true, -- if you want to enable the plugin
-		message_template = " <summary> • <date> • <author> • <sha>",
+		message_template = "     <summary> • <date> • <author> • <sha>",
 		date_format = "%d-%m-%Y %H:%M:%S",
-		virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
+		virtual_text_column = 1, -- virtual text start column, start at a fixed column instead of EOF, check Start virtual text at column section for more options
 	},
 }
