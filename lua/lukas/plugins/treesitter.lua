@@ -12,7 +12,6 @@ return {
 		local treesitter = require("nvim-treesitter")
 
 		local parsers = {
-			"angular",
 			"arduino",
 			"bash",
 			"bibtex",
