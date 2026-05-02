@@ -16,7 +16,7 @@ return {
 			},
 		},
 		explorer = { enabled = false },
-		indent = { enabled = true },
+		indent = { enabled = true, animate = { enabled = false } },
 		input = { enabled = true },
 		notifier = {
 			enabled = true,
