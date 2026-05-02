@@ -55,7 +55,7 @@ return {
 				styles = {
 					bold = true,
 					italic = false,
-					transparent = true,
+					transparent = false,
 				},
 			})
 			vim.cmd([[colorscheme rose-pine-moon]])
