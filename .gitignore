@@ -8,3 +8,5 @@ snapshots
 # vendor
 *.png
 
+# changelogs
+*.idx
