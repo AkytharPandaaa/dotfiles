@@ -5,3 +5,6 @@ cache
 # snapshots
 snapshots
 
+# vendor
+*.png
+
