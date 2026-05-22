@@ -13,15 +13,18 @@ if status is-interactive
     # fish_color_pine #3e8fb0
     # fish_color_foam #9ccfd8
     # fish_color_iris #c4a7e7
-    set --global hydro_color_pwd "#f6c177"
+
+    # colors for the prompt
+    set --global hydro_color_pwd "#ea9a97"
     set --global hydro_color_git "#c4a7e7"
-    set --global hydro_color_start "#9ccfd8"
+    set --global hydro_color_start "#f6c177"
     set --global hydro_color_error "#eb6f92"
     set --global hydro_color_prompt "#908caa"
     set --global hydro_color_duration "#3e8fb0"
 
-    set --global hydro_symbol_prompt "|>"
-    set --global hydro_symbol_start " "
+    # letters for the prompt
+    set --global hydro_symbol_prompt ""
+    set --global hydro_symbol_start " "
     set --global hydro_multiline false
     set --global fish_prompt_pwd_dir_length 3
 
