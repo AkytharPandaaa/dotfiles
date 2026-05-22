@@ -10,3 +10,6 @@
 [submodule "plugins/rose-pine"]
 	path = plugins/rose-pine
 	url = https://github.com/rose-pine/fish.git
+[submodule "plugins/starship-rose-pine"]
+	path = plugins/starship-rose-pine
+	url = https://github.com/rose-pine/starship.git

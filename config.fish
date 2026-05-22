@@ -2,7 +2,6 @@ if status is-interactive
     # theme
     fish_config theme choose --color-theme=dark "Rosé Pine Moon Auto"
 
-    # hydro
     #set --global hydro_color_pwd "#$(echo $fish_color_gold | grep -Po [0-9af]{6})"
     # Rosé Pine colors
     # fish_color_subtle #908caa
@@ -13,20 +12,6 @@ if status is-interactive
     # fish_color_pine #3e8fb0
     # fish_color_foam #9ccfd8
     # fish_color_iris #c4a7e7
-
-    # colors for the prompt
-    set --global hydro_color_pwd "#ea9a97"
-    set --global hydro_color_git "#c4a7e7"
-    set --global hydro_color_start "#f6c177"
-    set --global hydro_color_error "#eb6f92"
-    set --global hydro_color_prompt "#908caa"
-    set --global hydro_color_duration "#3e8fb0"
-
-    # letters for the prompt
-    set --global hydro_symbol_prompt ""
-    set --global hydro_symbol_start " "
-    set --global hydro_multiline false
-    set --global fish_prompt_pwd_dir_length 3
 
     # sponge
     set sponge_successful_exit_codes 0 127 255
@@ -51,4 +36,7 @@ if status is-interactive
     alias gp "git pull && git push"
     alias gs "git status -sb"
     alias gsubinit "git submodule update --init --recursive"
+
+    # starship
+    starship init fish | source
 end
