@@ -2,6 +2,8 @@ if status is-interactive
     # theme
     fish_config theme choose --color-theme=dark "Rosé Pine Moon Auto"
 
+    # theme setup: ln -s ~/.config/fish/plugins/starship-rose-pine/rose-pine-moon.toml ~/.config/starship.toml
+
     #set --global hydro_color_pwd "#$(echo $fish_color_gold | grep -Po [0-9af]{6})"
     # Rosé Pine colors
     # fish_color_subtle #908caa
