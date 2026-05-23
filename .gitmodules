@@ -10,3 +10,7 @@
 [submodule "plugins/starship-rose-pine"]
 	path = plugins/starship-rose-pine
 	url = https://github.com/rose-pine/starship.git
+[submodule "scripts/PandaUpdater"]
+	path = scripts/PandaUpdater
+	url = https://github.com/AkytharPandaaa/PandaUpdater.git
+	branch = main
