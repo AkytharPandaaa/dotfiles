@@ -6,8 +6,8 @@ if status is-interactive
     fish_config theme choose --color-theme=dark "Rosé Pine Moon Auto"
 
     # starship theme
-    if command -q starship && test -e ~/.config/fish/plugins/starship-rose-pine/rose-pine-moon.toml && ! test -e ~/.config/starship.toml
-        ln -s ~/.config/fish/plugins/starship-rose-pine/rose-pine-moon.toml ~/.config/starship.toml
+    if command -q starship && test -e ~/.config/fish/plugins/rose-pine-starship/rose-pine-moon.toml
+        ln -sf ~/.config/fish/plugins/rose-pine-starship/rose-pine-moon.toml ~/.config/starship.toml
     end
 
     # ===============================
