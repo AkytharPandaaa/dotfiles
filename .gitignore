@@ -1,2 +1,7 @@
 fish_variables*
 .DS_Store
+
+# location where fisher installs its scripts
+functions/_*
+conf.d/*
+themes/*
