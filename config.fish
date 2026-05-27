@@ -2,6 +2,11 @@ if status is-interactive
     # theme
     fish_config theme choose --color-theme=dark "Rosé Pine Moon Auto"
 
+    # install PandaFishFun (custom functions)
+    if test -e "./scripts/PandaFishFun/functions/_panfishfun_universal_os_update.fish"
+        fisher install ./scripts/PandaFishFun/
+    end
+
     # theme setup: ln -s ~/.config/fish/plugins/starship-rose-pine/rose-pine-moon.toml ~/.config/starship.toml
 
     #set --global hydro_color_pwd "#$(echo $fish_color_gold | grep -Po [0-9af]{6})"
