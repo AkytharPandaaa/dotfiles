@@ -15,3 +15,6 @@
 	path = scripts/PandaFishFun
 	url = ssh://git@pandagit/AkytharPandaaa/PandaFishFun.git
 	branch = main
+[submodule "plugins/rose-pine-starship"]
+	path = plugins/rose-pine-starship
+	url = https://github.com/AkytharPandaaa/rose-pine-starship.git
