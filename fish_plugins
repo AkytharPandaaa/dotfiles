@@ -1,3 +1,5 @@
+~/.config/fish/scripts/PandaFishFun
+
 catppuccin/fish
 decors/fish-colored-man
 gazorby/fish-abbreviation-tips
@@ -6,4 +8,3 @@ jorgebucaran/fisher
 mattmc3/magic-enter.fish
 meaningful-ooo/sponge
 rose-pine/fish
-~/.config/fish/scripts/PandaFishFun
