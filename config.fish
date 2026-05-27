@@ -7,7 +7,8 @@ if status is-interactive
 
     # starship theme
     if command -q starship && test -e ~/.config/fish/plugins/rose-pine-starship/rose-pine-moon.toml
-        ln -sf ~/.config/fish/plugins/rose-pine-starship/rose-pine-moon.toml ~/.config/starship.toml
+        rm ~/.config/starship.toml >/dev/null
+        ln -s ~/.config/fish/plugins/rose-pine-starship/rose-pine-moon.toml ~/.config/starship.toml
     end
 
     # ===============================
