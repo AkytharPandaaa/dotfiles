@@ -36,14 +36,6 @@ if status is-interactive
     # ALIASES
     # ===============================
 
-    if command -q eza
-        alias ls eza
-    end
-
-    if test "$(uname)" = Darwin
-        alias grep ggrep
-    end
-
     # general
     alias :qa exit
     alias cpufreq "watch -n1 \"grep '^[c]pu MHz' /proc/cpuinfo | column\""
@@ -55,6 +47,15 @@ if status is-interactive
     alias rm "rm -v"
     alias rsync "rsync -avSAXHP"
     alias yay "yay --sudoloop"
+
+    # conditionals
+    if command -q eza
+        alias ls eza
+    end
+
+    if test "$(uname)" = Darwin
+        alias grep ggrep
+    end
 
     # git
     alias gc "git commit -m"
