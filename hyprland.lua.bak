@@ -1,0 +1,62 @@
+-- created by AkytharPandaaa
+-- inspired by: https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.lua
+
+-- ------------------------------------
+-- MONITORS
+-- ------------------------------------
+
+-- hl.monitor({ output = "DP-2", mode = "3440x1440@59.97", position = "1080x0", scale = 0 })
+hl.monitor({ output = "DP-2", mode = "2560x1440@59.97", position = "1080x0", scale = 0 })
+hl.monitor({ output = "DP-3", mode = "1920x1080@60", position = "0x0", scale = 0, transform = 1 })
+
+hl.monitor({ output = "", mode = "preferred", position = "auto", scale = 1 })
+
+-- ------------------------------------
+-- MY PROGRAMS
+-- ------------------------------------
+
+local terminal = "kitty"
+local fileManager = "thunar" -- "dolphin"
+local launcher = 'fuzzel --config="$HOME/.config/fuzzel/fuzzel.ini"'
+local screenshotArea =
+	"hyprshot --output-folder \"Bilder/Screenshots\" --filename \"Screenshot $(date +'%Y-%m-%d at %H-%M-%S') - $(hyprctl activewindow | grep -Po '(?<=title: ).+' | sed 's!/!_!g').png\" --mode region --freeze"
+local browser = "firefox"
+local scad = "env QT_QPA_PLATFORM=xcb openscad"
+
+-- ------------------------------------
+-- AUTOSTART
+-- ------------------------------------
+
+hl.on("hyprland.start", function()
+	-- services - hyperland
+	hl.exec("systemctl --user start hyprpolkitagent") -- GUI root password prompt
+	hl.exec("wl-paste --type text --watch cliphist store") -- stores only text data
+	hl.exec("wl-paste --type image --watch cliphist store") -- stores only image data
+	hl.exec("swaync") -- notifications
+	hl.exec("waybar") -- top info bar
+	hl.exec("syncthing") -- file sync
+	hl.exec("sleep 5 && uxplay") -- uxplay: AirPlay server (virtual apple tv)
+	hl.exec("hyprpaper") -- wallpapers
+
+	-- services - kde
+	hl.exec("/usr/lib/pam_kwallet_init &") --  KWallet Password store
+	hl.exec("balooctl6 disable") --  KDE file indexer (disable)
+
+	-- background services
+	hl.exec("nextcloud") --  cloud sync
+	hl.exec("[workspace 5 silent] discord --start-minimized") --  Discord (--start-minimized)
+	hl.exec("[workspace 3 silent] steam -silent") --  steam (-silent)
+
+	-- apps
+	-- hl.exec("[workspace 4 silent] thunderbird") --  mail
+	hl.exec("[workspace 4 silent] sleep 5 && deltachat-desktop") --  mail-chat
+	hl.exec("[workspace 4 silent] Telegram") --  Telegram (-startintray)
+	-- hl.exec("[workspace 5 silent] ferdium") --  Messengers: Discord/EpicGames
+	hl.exec("[workspace 1] sleep 2 && keepassxc") --  passwords
+end)
+
+hl.window_rule({ name = "discord", match = { class = "^(discord)$" }, workspace = "5 silent" })
+hl.window_rule({ name = "deltachat", match = { class = "^(deltachat-desktop)$" }, workspace = "4 silent" })
+hl.window_rule({ name = "telegram", match = { class = "^(Telegram)$" }, workspace = "4 silent" })
+hl.window_rule({ name = "steam", match = { class = "^(steam)$" }, workspace = "3 silent" })
+hl.window_rule({ name = "keepassxc", match = { class = "^(keepassxc)$" }, workspace = "1" })
