@@ -1,3 +1,7 @@
+-- ------------------------------------------------------------
+-- ENVIRONMENTAL VARIABLES
+-- ------------------------------------------------------------
+
 -- design settings
 hl.env("HYPRCURSOR_THEME", "Vimix-cursors")
 hl.env("HYPRCURSOR_SIZE", "36")
