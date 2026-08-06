@@ -1,3 +1,7 @@
+-- ------------------------------------------------------------
+-- AUTOSTART
+-- ------------------------------------------------------------
+
 hl.on("hyprland.start", function()
 	-- services - hyperland
 	hl.exec_cmd("systemctl --user start hyprpolkitagent") -- GUI root password prompt
