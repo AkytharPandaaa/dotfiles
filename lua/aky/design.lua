@@ -1,4 +1,7 @@
+-- ------------------------------------------------------------
 -- THEME
+-- ------------------------------------------------------------
+
 local theme = require("themes.rose-pine.dist.rose-pine")
 -- local theme = require("themes.rose-pine.dist.rose-pine-dawn")
 -- local theme = require("themes.rose-pine.dist.rose-pine-moon")
