@@ -1,4 +1,6 @@
+-- ------------------------------------------------------------
 -- PROGRAMS
+-- ------------------------------------------------------------
 
 local fileManager = "thunar" -- "dolphin"
 local spotlight = 'fuzzel --config="$HOME/.config/fuzzel/fuzzel.ini"'
