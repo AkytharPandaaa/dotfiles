@@ -11,7 +11,7 @@ hl.config({
 		repeat_rate = 25,
 		repeat_delay = 600,
 
-		sensitivity = 0.0,
+		sensitivity = 0.25,
 		accel_profile = "flat",
 		natural_scroll = false,
 
