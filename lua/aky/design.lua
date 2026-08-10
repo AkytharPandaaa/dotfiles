@@ -104,11 +104,14 @@ hl.config({
 
 hl.config({
 	animations = {
-		enabled = false,
+		enabled = true,
 
 		workspace_wraparound = true,
 	},
 })
+hl.curve("apple", { type = "spring", mass = 1, stiffness = 500, dampening = 50 })
+hl.animation({ leaf = "workspaces", enabled = false })
+hl.animation({ leaf = "windows", enabled = true, speed = 2, spring = "apple" })
 
 -- ------------------------------------------------------------
 -- DWINDLE
@@ -119,7 +122,7 @@ hl.config({
 	dwindle = {
 		force_split = 0,
 		preserve_split = true,
-		smart_split = true,
+		smart_split = false,
 		smart_resizing = true,
 	},
 })
