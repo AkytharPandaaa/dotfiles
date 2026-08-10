@@ -25,11 +25,5 @@ hl.config({
 			natural_scroll = true,
 			tap_to_click = true,
 		},
-
-		tablet = { -- device: wacom intuos s pen
-			-- TODO: move into devices file
-			transform = 0,
-			output = "DP-2",
-		},
 	},
 })
