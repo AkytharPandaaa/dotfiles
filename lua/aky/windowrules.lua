@@ -2,9 +2,6 @@
 -- WINDOW RULES
 -- ------------------------------------------------------------
 
--- TODO: change to window rule to always start scad with xwayland
-local scad = "env QT_QPA_PLATFORM=xcb openscad"
-
 -- Ignore maximize requests from apps. You'll probably like this.
 hl.window_rule({
 	name = "global ignore maximize",
@@ -60,7 +57,6 @@ hl.window_rule({
 
 	fullscreen = true,
 	content = "game",
-	content = game,
 })
 hl.window_rule({
 	name = "Palworld Crash Reporter",
