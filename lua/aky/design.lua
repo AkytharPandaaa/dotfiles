@@ -2,9 +2,9 @@
 -- THEME
 -- ------------------------------------------------------------
 
-local theme = require("themes.rose-pine.dist.rose-pine")
--- local theme = require("themes.rose-pine.dist.rose-pine-dawn")
--- local theme = require("themes.rose-pine.dist.rose-pine-moon")
+local theme = require("lua.aky.themes.rose-pine.dist.rose-pine")
+-- local theme = require("lua.aky.themes.rose-pine.dist.rose-pine-dawn")
+-- local theme = require("lua.aky.themes.rose-pine.dist.rose-pine-moon")
 
 -- ------------------------------------------------------------
 -- GENERAL
@@ -56,46 +56,45 @@ hl.config({
 -- https://wiki.hyprland.org/Configuring/Variables/#decoration
 
 hl.config({
-	rounding = 0, -- 0, 8, 12
-	rounding_power = 2.0,
+	decoration = {
+		rounding = 0, -- 0, 8, 12
+		rounding_power = 2.0,
 
-	-- opacity
-	active_opacity = 1.0,
-	inactive_opacity = 1.0,
-	fullscreen_opacity = 1.0,
+		-- opacity
+		active_opacity = 1.0,
+		inactive_opacity = 1.0,
+		fullscreen_opacity = 1.0,
 
-	-- dimming
-	dim_modal = true,
-	dim_inactive = false,
-	dim_strength = 0.5,
+		-- dimming
+		dim_modal = true,
+		dim_inactive = false,
+		dim_strength = 0.5,
 
-	border_part_of_window = true,
+		border_part_of_window = true,
 
-	-- blur
-	blur = {
-		enabled = false, -- true
-		size = 5,
-		passes = 3,
+		-- blur
+		blur = {
+			enabled = false, -- true
+			size = 5,
+			passes = 3,
 
-		vibrancy = 0.1696,
+			vibrancy = 0.1696,
+		},
+
+		-- shadow
+		shadow = {
+			enabled = false,
+			range = 4,
+			render_power = 3,
+			color = theme.muted, -- rgba(1a1a1aee)
+		},
+
+		-- glow
+		glow = { enabled = false },
+
+		-- motion blur (on moving/resizing)
+		motion_blur = { enabled = false },
 	},
-
-	-- shadow
-	shadow = {
-		enabled = false,
-		range = 4,
-		render_power = 3,
-		color = theme.muted, -- rgba(1a1a1aee)
-	},
-
-	-- glow
-	glow = { enabled = false },
-
-	-- motion blur (on moving/resizing)
-	motion_blur = { enabled = false },
-
-	-- wobble (on moving/resizing)
-	wobble = { enabled = false },
 })
 
 -- ------------------------------------------------------------
