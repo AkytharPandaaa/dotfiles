@@ -11,7 +11,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar") -- top info bar
 	hl.exec_cmd("hyprpaper") -- wallpapers
 
-	-- hl.exec_cmd("systemctl --user start ssh-agent.service") -- ssh-agent
+	-- ssh-agent
+	hl.exec_cmd("ssh-agent -D -a $SSH_AUTH_SOCK")
 
 	-- services - kde
 	hl.exec_cmd("/usr/lib/pam_kwallet_init &") --  KWallet Password store
