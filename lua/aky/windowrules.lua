@@ -185,7 +185,7 @@ hl.window_rule({
 		initial_title = "^(Fladder)$",
 	},
 
-	fullscreen_state = 0,
+	fullscreen = false,
 })
 hl.window_rule({
 	name = "MPV Player",
@@ -395,8 +395,7 @@ hl.window_rule({
 	float = true,
 	no_initial_focus = true,
 	size = { 500, 1170 },
-	move = { 0 },
-	(monitor_h * 0.5 - window_h * 0.5),
+	move = { 0, "(monitor_h * 0.5 - window_h * 0.5)" },
 })
 
 hl.window_rule({
