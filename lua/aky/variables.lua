@@ -20,4 +20,4 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 hl.env("XDG_MENU_PREFIX", "arch-")
 
 -- ssh-agent
-hl.env("SSH_AUTH_SOCK", "$XDG_RUNTIME_DIR/ssh-agent.socket")
+hl.env("SSH_AUTH_SOCK", os.getenv("XDG_RUNTIME_DIR") .. "/ssh-agent.socket")
