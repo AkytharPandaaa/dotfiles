@@ -24,6 +24,9 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("steam -silent && tauon") -- steam and music
 	hl.exec_cmd("discord --start-minimized", { workspace = "5 silent" })
 
+	-- disable DnD
+	hl.exec_cmd("swaync-client -df")
+
 	-- apps
 	-- hl.exec_cmd("thunderbird && ferdium")
 	hl.exec_cmd("deltachat-desktop", { workspace = "4 silent" })
