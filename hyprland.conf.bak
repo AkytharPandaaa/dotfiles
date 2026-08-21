@@ -55,8 +55,8 @@ exec-once = syncthing                                      # file sync
 #exec-once = hyprpaper                                     # wallpapers
 
 # SERVICES - KDE
-exec-once = /usr/lib/pam_kwallet_init &                     # KWallet Password store
-exec-once = balooctl6 disable                               # KDE file indexer (disable)
+exec-once = /usr/lib/pam_kwallet_init &       # KWallet Password store
+exec-once = balooctl6 disable                 # KDE file indexer (disable)
 
 # BACKGROUND APPS
 exec-once = nextcloud                                        # cloud sync
@@ -64,10 +64,10 @@ exec-once = nextcloud                                        # cloud sync
 #exec-once = [workspace 3 silent] steam -silent              # steam
 
 # FOREGROUND APPS
-#exec-once = [workspace 4 silent] thunderbird                   # mail
-#exec-once = [workspace 4 silent] lollypop                      # music
-#exec-once = [workspace 5 silent] sleep 5 && deltachat-desktop  # mail-chat
-#exec-once = [workspace 5 silent] Telegram                      # Telegram (-startintray)
+#exec-once = [workspace 5 silent] thunderbird                   # mail
+#exec-once = [workspace 5 silent] lollypop                      # music
+#exec-once = [workspace 4 silent] sleep 5 && deltachat-desktop  # mail-chat
+#exec-once = [workspace 4 silent] Telegram                      # Telegram (-startintray)
 #exec-once = [workspace 5 silent] ferdium                       # Messengers: Discord/EpicGames
 exec-once = [workspace 1] sleep 2 && keepassxc                  # passwords
 

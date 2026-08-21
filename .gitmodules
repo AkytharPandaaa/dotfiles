@@ -1,3 +1,4 @@
-[submodule "plugins/rose-pine"]
-	path = plugins/rose-pine
+[submodule "themes/rose-pine"]
+	path = lua/aky/themes/rose-pine
 	url = https://github.com/rose-pine/hyprland.git
+	branch = main
