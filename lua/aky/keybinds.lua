@@ -16,7 +16,9 @@ hl.bind(
 	mainMod .. " + SHIFT + S",
 	hl.dsp.exec_cmd(
 		"hyprshot "
-			.. '--output-folder "~/Bilder/Screenshots" '
+			.. '--output-folder "'
+			.. os.getenv("HOME")
+			.. '/Bilder/Screenshots" '
 			.. "--filename \"Screenshot $(date +'%Y-%m-%d at %H-%M-%S') - $(hyprctl activewindow | grep -Po '(?<=title: ).+' | sed 's!/!_!g').png\" "
 			.. "--mode region "
 			.. "--freeze"
