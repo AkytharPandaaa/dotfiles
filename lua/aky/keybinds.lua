@@ -29,6 +29,7 @@ hl.bind(
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("kitty")) -- terminal
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager)) -- file manager
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(spotlight)) -- spotlight (program laucher)
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("vicinae toggle")) -- spotlight (program laucher)
 -- bind = $mainMod, O, AI_Assistant
 
 hl.bind(mainMod .. " + C", hl.dsp.window.close()) -- close active window
