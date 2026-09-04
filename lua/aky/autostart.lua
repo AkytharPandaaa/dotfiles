@@ -8,7 +8,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("wl-paste --type text --watch cliphist store") -- stores only text data
 	hl.exec_cmd("wl-paste --type image --watch cliphist store") -- stores only image data
 	hl.exec_cmd("swaync") -- notifications
-	hl.exec_cmd("waybar") -- top info bar
+	--hl.exec_cmd("waybar") -- top info bar
+	hl.exec_cmd("ashell") -- top info bar
 	hl.exec_cmd("hyprpaper") -- wallpapers
 
 	-- ssh-agent
@@ -22,7 +23,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("syncthing && nextcloud") -- file sync
 	hl.exec_cmd("sleep 5 && uxplay") -- AirPlay server
 	hl.exec_cmd("steam -silent && tauon") -- steam and music
-	hl.exec_cmd("discord --start-minimized", { workspace = "5 silent" })
+	-- hl.exec_cmd("discord --start-minimized", { workspace = "5 silent" })
 
 	-- disable DnD
 	hl.exec_cmd("swaync-client -df")
