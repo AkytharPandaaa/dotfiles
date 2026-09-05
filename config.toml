@@ -10,7 +10,7 @@ position = "Top"             # "Top" (default) or "Bottom"
 # ── Logging ───────────────────────────────────────────────────────────────────
 
 [logging]
-level = "info"             # (default) "error", "warn", "info", or "debug"; supports per-module filters
+level = "warn"             # (default) "error", "warn", "info", or "debug"; supports per-module filters
 target = "stdout"            # (default) "file", "stdout", or "stderr"
 #directory = "/var/log/ashell_panda.log" # (default: $XDG_RUNTIME_DIR) supports ~ and $VAR
 
@@ -42,7 +42,7 @@ group_by_monitor = false          # (default)
 enable_workspace_filling = false  # (default)
 # disable_special_workspaces = false  # (default) set true to hide special workspaces
 # max_workspaces = 10               # (default: None) max number of workspaces when filling
-workspace_names = ["1", "2", "3", "", "", ""] # (default: []) custom names for workspaces
+workspace_names = ["1", "2", "", "", ""] # (default: []) custom names for workspaces
 # enable_virtual_desktops = false   # (default) group workspaces into virtual desktops
 # invert_scroll_direction = "All"   # (default: None) "All", "Mouse", or "Trackpad"
 
@@ -61,7 +61,7 @@ command = "fuzzel"
 
 [window_title]
 mode = "Title"                   # "Title" (default), "Class", "InitialTitle", "InitialClass"
-truncate_title_after_length = 42 # (default) 0 means no truncation; capped at 2048
+truncate_title_after_length = 37 # (default) 0 means no truncation; capped at 2048
 
 # ── Keyboard Layout ───────────────────────────────────────────────────────────
 
@@ -100,7 +100,7 @@ mounts = ["/", "/home", "/media/containers", "/media/spiele/", "/var/cache/pacma
 # ── Media Player ──────────────────────────────────────────────────────────────
 
 [media_player]
-indicator_format = "IconAndText"  # (default), "Text", or "Icon"
+indicator_format = "Icon"  # (default), "Text", or "Icon"
 indicator_fields = ["Artist", "Title"] # (default), also supports "Album"
 max_text_length = 42         # (default)
 # indicator_visualizer = "Background" # (default: None = disabled), "Before", or "After"
@@ -117,8 +117,8 @@ blocklist = []    # (default: []) hide tray items matching regex patterns
 
 [tempo]
 #clock_format = "%a %d %b %R"
-formats = [ "%a %d. %b %H:%M:%S", "%Y-%m-%d %H:%M:%S", "%H:%M:%S" ]
-timezones = [ "UTC", "EST", "JST", "CET" ]
+formats = [ "%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%a %d. %b %H:%M:%S" ]
+timezones = [ "CET", "UTC", "JST", "EST" ]
 # weather_location = { City = "Rome" }
 # weather_location = { Coordinates = [40.7128, -74.0060] }
 weather_location = "Current"
@@ -195,17 +195,17 @@ enabled = false   # (default)
 # ── Appearance ────────────────────────────────────────────────────────────────
 
 [appearance]
-# font_name = "Sans"           # (default: None) custom font family
-# scale_factor = 1.0           # (default) range: 0.0 < x <= 2.0
-# opacity = 1.0                # (default) range: 0.0 to 1.0, every surface ashell draws
+font_name = "AnnotationM NF"           # (default: None) custom font family
+scale_factor = 1.1           # (default) range: 0.0 < x <= 2.0
+opacity = 1.0                # (default) range: 0.0 to 1.0, every surface ashell draws
                                # or a table: [appearance.opacity] with default/bar/menu/osd/notifications
 # blur = "auto"                # (default) auto|always|never, compositor blur
-primary_color = "#7aa2f7"
-success_color = "#9ece6a"
-warning_color = "#e0af68"
-danger_color = "#f7768e"
-text_color = "#a9b1d6"
-workspace_colors = [ "#7aa2f7", "#9ece6a" ]
+primary_color = "#3e8fb0"
+success_color = "#9ccfd8"
+warning_color = "#ea9a97"
+danger_color = "#eb6f92"
+text_color = "#e0def4"
+workspace_colors = [ "#c4a7e7", "#9ccfd8" ]
 # special_workspace_colors = [ "#7aa2f7", "#9ece6a" ]  # (default: None, falls back to workspace_colors)
 
 [appearance.bar]
@@ -217,9 +217,9 @@ surface = "transparent"  # (default) or "solid"
 # backdrop = 0.0   # (default) darkening drawn behind an open menu
 
 [appearance.background_color]
-base = "#1a1b26"
-weak = "#24273a"
-strong = "#414868"
+base = "#232136" # base
+weak = "#2a273f" # surface
+strong = "#393552"
 # weakest = "#000000"    # (default: None)
 # weaker = "#000000"     # (default: None)
 # neutral = "#000000"    # (default: None)
