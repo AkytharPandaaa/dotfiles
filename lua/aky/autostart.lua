@@ -26,7 +26,7 @@ hl.on("hyprland.start", function()
 	-- hl.exec_cmd("discord --start-minimized", { workspace = "5 silent" })
 
 	-- disable DnD
-	hl.exec_cmd("swaync-client -df")
+	--hl.exec_cmd("swaync-client -df")
 
 	-- apps
 	-- hl.exec_cmd("thunderbird && ferdium")
