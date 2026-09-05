@@ -30,7 +30,7 @@ right = ["Updates", "MediaPlayer", "SystemInfo", "Tray", ["Privacy", "Settings",
 
 [updates]
 check_cmd = "checkupdates; yay -Qua"
-update_cmd = 'alacritty -e bash -c "syu; echo Done - Press enter to exit; read" &'
+update_cmd = 'alacritty -e fish -c "syu; echo Done - Press enter to exit; read" &'
 interval = 600             # seconds; minimum enforced to 1
 
 # ── Workspaces ────────────────────────────────────────────────────────────────
