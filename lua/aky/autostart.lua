@@ -3,6 +3,9 @@
 -- ------------------------------------------------------------
 
 hl.on("hyprland.start", function()
+	-- notification service fix:
+	hl.exec_cmd("killall swaync")
+
 	-- services - hyperland
 	hl.exec_cmd("systemctl --user start hyprpolkitagent") -- GUI root password prompt
 	hl.exec_cmd("wl-paste --type text --watch cliphist store") -- stores only text data
