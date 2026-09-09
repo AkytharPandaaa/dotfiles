@@ -1,2 +1,5 @@
 *.auto.conf
 current-theme.conf
+
+*/.DS_Store
+.DS_Store
