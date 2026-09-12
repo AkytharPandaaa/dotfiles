@@ -91,7 +91,7 @@ inode/directory=org.gnome.Nautilus.desktop;
 text/calendar=org.mozilla.Thunderbird.desktop;
 text/css=org.gnome.gedit.desktop;
 text/csv=org.gnome.gedit.desktop;
-text/html=org.gnome.gedit.desktop;
+text/html=brave-browser.desktop;
 text/javascript=org.gnome.gedit.desktop;
 text/markdown=org.gnome.gedit.desktop;
 text/plain=org.gnome.gedit.desktop;
@@ -106,11 +106,13 @@ x-scheme-handler/chrome=firefox.desktop;
 x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop;
 x-scheme-handler/etcher=balenaEtcher.desktop;
 x-scheme-handler/geo=openstreetmap-geo-handler.desktop;
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/http=brave-browser.desktop;
+x-scheme-handler/https=brave-browser.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop;
 x-scheme-handler/mailto=org.mozilla.Thunderbird.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop.desktop;
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
 
 [Added Associations]
 application/gzip=org.gnome.FileRoller.desktop;org.kde.ark.desktop;
