@@ -117,7 +117,7 @@ blocklist = []    # (default: []) hide tray items matching regex patterns
 
 [tempo]
 #clock_format = "%a %d %b %R"
-formats = [ "%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%a %d. %b %H:%M:%S" ]
+formats = [ "%H:%M:%S", "%Y-%m-%d %H:%M:%S KW%W", "%a %d. %b %H:%M:%S" ]
 timezones = [ "CET", "UTC", "JST", "EST" ]
 # weather_location = { City = "Rome" }
 # weather_location = { Coordinates = [40.7128, -74.0060] }
