@@ -6,11 +6,13 @@ return {
 			-- add the config here
 			themes = {
 				{ name = "[dark] TokyoNight Storm", colorscheme = "tokyonight-storm" },
-				{ name = "[dark] Pastelnight", colorscheme = "pastelnight" },
+				{ name = "[dark] Cyberpunk", colorscheme = "cyberpunk" },
 				{ name = "[dark] Everforest", colorscheme = "everforest" },
+				{ name = "[dark] Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
 				{ name = "[dark] Rosé Pine Moon", colorscheme = "rose-pine-moon" },
 				{ name = "[light] Rosé Pine Dawn", colorscheme = "rose-pine-dawn" },
-				{ name = "[light] Material", colorscheme = "material-lighter" },
+				{ name = "[light] Catppuccin Latte", colorscheme = "catppuccin-latte" },
+				{ name = "[light] TokyoNight Day", colorscheme = "tokyonight-day" },
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.
 		})
