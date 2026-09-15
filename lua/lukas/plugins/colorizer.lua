@@ -15,7 +15,7 @@ return {
 				css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
 
 				-- Available modes: foreground (colorizes text), background
-				mode = "foreground", -- Set the display mode.
+				mode = "background", -- Set the display mode.
 			},
 			"*",
 		})
