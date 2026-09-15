@@ -21,6 +21,32 @@ return {
 			})
 		end,
 	},
+	{ -- https://github.com/pablobfonseca/cyberpunk-theme
+		"pablobfonseca/cyberpunk-theme",
+		priority = 1000,
+		config = function()
+			require("cyberpunk").setup({
+				-- Theme variant
+				--style = "storm", -- storm, night, neon
+
+				-- Transparency
+				transparent = false,
+
+				-- Terminal colors
+				terminal_colors = true,
+
+				-- Style customization
+				styles = {
+					comments = { italic = false },
+					keywords = { bold = true },
+					functions = { bold = true },
+					variables = {},
+					sidebars = "dark", -- dark, transparent
+					floats = "dark", -- dark, transparent
+				},
+			})
+		end,
+	},
 	{ -- https://github.com/sainnhe/everforest
 		"sainnhe/everforest",
 		priority = 1000,
@@ -29,20 +55,6 @@ return {
 			vim.g.everforest_background = "soft"
 			vim.g.everforest_disable_italic_comment = true
 			vim.g.everforest_better_performance = true
-		end,
-	},
-	{ -- https://github.com/pauchiner/pastelnight.nvim
-		"pauchiner/pastelnight.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("pastelnight").setup({
-				style = "default",
-				styles = {
-					comments = { italic = false },
-					keyword = { italic = false },
-				},
-			})
 		end,
 	},
 	{ -- https://github.com/rose-pine/neovim
@@ -113,5 +125,4 @@ return {
 			})
 		end,
 	},
-	{ "marko-cerovac/material.nvim" }, -- https://github.com/marko-cerovac/material.nvim
 }
