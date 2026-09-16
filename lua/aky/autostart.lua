@@ -3,7 +3,7 @@
 -- ------------------------------------------------------------
 
 hl.on("hyprland.start", function()
-	local socket = require("socket")
+	--local socket = require("socket")
 
 	-- services - hyperland
 	hl.exec_cmd("systemctl --user start hyprpolkitagent") -- GUI root password prompt
@@ -37,7 +37,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("keepassxc", { workspace = "1" })
 
 	-- delayed services
-	socket.sleep(10)
+	--socket.sleep(10)
 	hl.exec_cmd("uxplay") -- AirPlay server
 	hl.exec_cmd("Telegram", { workspace = "4 silent" }) -- messages
 
