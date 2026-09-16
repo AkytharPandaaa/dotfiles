@@ -16,7 +16,9 @@ hl.bind(
 	mainMod .. " + SHIFT + S",
 	hl.dsp.exec_cmd(
 		"hyprshot "
-			.. '--output-folder "~/Bilder/Screenshots" '
+			.. '--output-folder "'
+			.. os.getenv("HOME")
+			.. '/Bilder/Screenshots" '
 			.. "--filename \"Screenshot $(date +'%Y-%m-%d at %H-%M-%S') - $(hyprctl activewindow | grep -Po '(?<=title: ).+' | sed 's!/!_!g').png\" "
 			.. "--mode region "
 			.. "--freeze"
@@ -27,6 +29,7 @@ hl.bind(
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("kitty")) -- terminal
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager)) -- file manager
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(spotlight)) -- spotlight (program laucher)
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("vicinae toggle")) -- spotlight (program laucher)
 -- bind = $mainMod, O, AI_Assistant
 
 hl.bind(mainMod .. " + C", hl.dsp.window.close()) -- close active window
