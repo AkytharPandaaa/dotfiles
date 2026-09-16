@@ -24,7 +24,7 @@ hl.on("hyprland.start", function()
 	-- background services
 	hl.exec_cmd("syncthing") -- file sync
 	hl.exec_cmd("nextcloud") -- file sync
-	hl.exec_cmd("steam -silent") -- steam
+	-- hl.exec_cmd("steam -silent") -- steam
 	-- hl.exec_cmd("discord --start-minimized", { workspace = "5 silent" })
 
 	-- disable DnD
@@ -33,13 +33,13 @@ hl.on("hyprland.start", function()
 	-- apps
 	-- hl.exec_cmd("thunderbird")
 	-- hl.exec_cmd("ferdium")
-	hl.exec_cmd("deltachat-desktop", { workspace = "4 silent" })
+	-- hl.exec_cmd("deltachat-desktop", { workspace = "4 silent" })
 	hl.exec_cmd("keepassxc", { workspace = "1" })
 
 	-- delayed services
 	--socket.sleep(10)
-	hl.exec_cmd("uxplay") -- AirPlay server
-	hl.exec_cmd("Telegram", { workspace = "4 silent" }) -- messages
+	-- hl.exec_cmd("uxplay") -- AirPlay server
+	-- hl.exec_cmd("Telegram", { workspace = "4 silent" }) -- messages
 
 	-- notification service fix:
 	hl.exec_cmd("killall swaync")
