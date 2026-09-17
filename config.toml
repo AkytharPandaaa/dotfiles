@@ -61,7 +61,7 @@ command = "fuzzel"
 
 [window_title]
 mode = "Title"                   # "Title" (default), "Class", "InitialTitle", "InitialClass"
-truncate_title_after_length = 37 # (default) 0 means no truncation; capped at 2048
+truncate_title_after_length = 42 # (default) 0 means no truncation; capped at 2048
 
 # ── Keyboard Layout ───────────────────────────────────────────────────────────
 
@@ -195,8 +195,9 @@ enabled = false   # (default)
 # ── Appearance ────────────────────────────────────────────────────────────────
 
 [appearance]
-font_name = "AnnotationM NF"           # (default: None) custom font family
-scale_factor = 1.1           # (default) range: 0.0 < x <= 2.0
+# font catalog: fc-list | cut -d: -f2 | sort -u | grep -i nerd | grep -i <font>
+font_name = "MartianMono NF"           # (default: None) custom font family
+scale_factor = 1.0           # (default) range: 0.0 < x <= 2.0
 opacity = 1.0                # (default) range: 0.0 to 1.0, every surface ashell draws
                                # or a table: [appearance.opacity] with default/bar/menu/osd/notifications
 # blur = "auto"                # (default) auto|always|never, compositor blur
