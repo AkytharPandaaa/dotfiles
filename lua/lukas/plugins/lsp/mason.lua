@@ -32,8 +32,8 @@ return {
 				"asm_lsp",
 				"bashls",
 				"cssls",
-				"docker_language_server",
 				"docker_compose_language_service",
+				"docker_language_server",
 				"dockerls",
 				"fish_lsp",
 				"harper_ls",
@@ -49,6 +49,7 @@ return {
 				"pyright",
 				"tailwindcss",
 				"yamlls",
+				"texlab",
 			},
 		})
 
