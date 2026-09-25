@@ -46,7 +46,8 @@ if status is-interactive
     alias ls "ls -1"
     alias rm "rm -v"
     alias rsync "rsync -avSAXHP"
-    alias yay "yay --sudoloop"
+    # alias yay "yay --sudoloop"
+    alias yay "echo 'yay is deactivated in config.fish'"
 
     # conditionals
     if command -q eza
