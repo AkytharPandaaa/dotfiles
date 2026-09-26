@@ -38,6 +38,7 @@ if status is-interactive
 
     # general
     alias :qa exit
+    alias clockfile "watch -n1 \"date +'%H:%M:%S' | tee clock.txt\""
     alias cpufreq "watch -n1 \"grep '^[c]pu MHz' /proc/cpuinfo | column\""
     alias dd "dd status=progress"
     alias dskspeed "sudo echo 'running write test:' && sudo dd bs=100M count=50 oflag=dsync if=/dev/zero"
