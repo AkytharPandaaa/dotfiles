@@ -14,8 +14,8 @@ local theme = require("lua.aky.themes.rose-pine.dist.rose-pine")
 hl.config({
 	general = {
 		border_size = 2,
-		gaps_in = 2,
-		gaps_out = 4,
+		gaps_in = 4, -- 2, 4
+		gaps_out = 6, -- 4, 6
 
 		col = {
 			active_border = {
@@ -57,7 +57,7 @@ hl.config({
 
 hl.config({
 	decoration = {
-		rounding = 0, -- 0, 8, 12
+		rounding = 12, -- 0, 8, 12
 		rounding_power = 2.0,
 
 		-- opacity
