@@ -5,10 +5,14 @@
 hl.on("hyprland.start", function()
 	--local socket = require("socket")
 
-	-- services - hyperland
-	hl.exec_cmd("systemctl --user start hyprpolkitagent") -- GUI root password prompt
+	-- services: clipboard
 	hl.exec_cmd("wl-paste --type text --watch cliphist store") -- stores only text data
 	hl.exec_cmd("wl-paste --type image --watch cliphist store") -- stores only image data
+	hl.exec_cmd("wl-clip-persist --clipboard regular") -- clip persists if application closes
+	--hl.exec_cmd("wl-clip-persist --clipboard primary") -- primary clip persists if application closes
+
+	-- services - hyperland
+	hl.exec_cmd("systemctl --user start hyprpolkitagent") -- GUI root password prompt
 	--hl.exec_cmd("swaync") -- notifications
 	--hl.exec_cmd("waybar") -- top info bar
 	hl.exec_cmd("ashell") -- top info bar
