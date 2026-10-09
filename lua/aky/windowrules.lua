@@ -81,6 +81,69 @@ hl.window_rule({
 	size = { 420, 500 },
 	move = { "(monitor_w*0.5-window_w*0.5)", "(monitor_h*0.5-window_h*0.5)" },
 })
+hl.window_rule({
+	name = "Ubisoft Connect Installer Language",
+	match = {
+		initial_class = "^(steam_app_[0-9]*)$",
+		initial_title = "^(Installer Language)$",
+	},
+
+	float = true,
+	fullscreen = false,
+	size = { 500, 375 },
+	move = { "(monitor_w*0.5-window_w*0.5)", "(monitor_h*0.5-window_h*0.5)" },
+})
+hl.window_rule({
+	name = "Ubisoft Connect Installer",
+	match = {
+		initial_class = "^(steam_app_[0-9]*)$",
+		initial_title = "^(Ubisoft Connect .*)$",
+	},
+
+	float = true,
+	fullscreen = false,
+	size = { 500, 375 },
+	move = { "(monitor_w*0.5-window_w*0.5)", "(monitor_h*0.5-window_h*0.5)" },
+})
+hl.window_rule({
+	name = "Ubisoft Connect - tray icon",
+	match = {
+		initial_class = "^(steam_app_3529892086)$",
+		initial_title = "^()$",
+	},
+
+	-- settings for hiding the window
+	no_initial_focus = true,
+	opacity = 0.1,
+	no_focus = true,
+
+	float = true,
+	fullscreen = false,
+	size = { 160, 20 },
+	move = { "(monitor_w*0.5-window_w*0.5)", "0" },
+})
+hl.window_rule({
+	name = "Ubisoft Connect",
+	match = {
+		initial_class = "^(steam_app_[0-9]*)$",
+		initial_title = "^(Ubisoft Connect)$",
+	},
+
+	fullscreen = false,
+	scrolling_width = 1390,
+	min_size = { 1215, 700 },
+})
+hl.window_rule({
+	name = "Ubisoft Connect - install game",
+	match = {
+		initial_class = "^(steam_app_[0-9]*)$",
+		initial_title = "^(Installation von .*)$",
+	},
+
+	fullscreen = false,
+	float = true,
+	min_size = { 715, 460 },
+})
 
 -- screenshare
 hl.window_rule({
