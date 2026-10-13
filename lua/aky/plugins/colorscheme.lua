@@ -21,6 +21,28 @@ return {
 			})
 		end,
 	},
+	{ -- https://github.com/EdenEast/nightfox.nvim
+		"EdenEast/nightfox.nvim",
+		config = function()
+			require("nightfox").setup({
+				options = {
+					transparent = false,
+				},
+			})
+		end,
+	},
+	{ -- https://github.com/maxmx03/solarized.nvim
+		"maxmx03/solarized.nvim",
+		lazy = false,
+		priority = 1000,
+		---@type solarized.config
+		opts = {},
+		config = function(_, opts)
+			vim.o.termguicolors = true
+			vim.o.background = "light"
+			require("solarized").setup(opts)
+		end,
+	},
 	{ -- https://github.com/pablobfonseca/cyberpunk-theme
 		"pablobfonseca/cyberpunk-theme",
 		priority = 1000,
@@ -47,6 +69,15 @@ return {
 			})
 		end,
 	},
+	{ -- https://github.com/sainnhe/edge
+		"sainnhe/edge",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.edge_enable_italic = false
+			vim.g.edge_disable_italic_comment = true
+		end,
+	},
 	{ -- https://github.com/sainnhe/everforest
 		"sainnhe/everforest",
 		priority = 1000,
@@ -54,7 +85,6 @@ return {
 		config = function()
 			vim.g.everforest_background = "soft"
 			vim.g.everforest_disable_italic_comment = true
-			vim.g.everforest_better_performance = true
 		end,
 	},
 	{ -- https://github.com/rose-pine/neovim
