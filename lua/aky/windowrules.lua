@@ -302,6 +302,19 @@ hl.window_rule({
 	move = { "(cursor_x-(window_w*0.5))", "(monitor_h*0.3-(window_h*0.5))" },
 })
 
+-- OpenSCAD
+hl.window_rule({
+	name = "OpenSCAD open dialog",
+	match = {
+		class = "^(openscad)$",
+		title = "^(Willkommen zu OpenSCAD)$",
+	},
+
+	float = true,
+	size = { 650, 800 },
+	move = { "((monitor_w*0.5)-(window_w*0.5))", "((monitor_h*0.5)-(window_h*0.5))" },
+})
+
 -- Chatterino
 hl.window_rule({
 	name = "Chatterino2 Emotes",
