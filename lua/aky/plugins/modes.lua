@@ -4,18 +4,15 @@ return {
 	config = function()
 		require("modes").setup({
 			colors = {
-				bg = "", -- Optional bg param, defaults to Normal hl group
 				copy = "#f6c177",
-				change = "#eb6f92",
 				delete = "#eb6f92",
 				format = "#ea9a97",
-				insert = "#9ccfd8",
+				insert = "", -- "#9ccfd8",
 				replace = "#3e8fb0",
-				select = "#c4a7e7",
 				visual = "#c4a7e7",
 			},
 
-			-- Set opacity for cursorline and number background
+			-- Set opacity for cursorline and number background (less for more transparency)
 			line_opacity = 0.5,
 
 			-- Enable cursor highlights
